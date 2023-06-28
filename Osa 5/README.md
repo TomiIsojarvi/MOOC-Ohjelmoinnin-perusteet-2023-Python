@@ -600,27 +600,169 @@ print(lista)
 [Vastaus](osa05-17b_etsi_elokuvat/src)
 
 ## Muodosta tuple
+Tee funktio tee_tuple(x: int, y: int, z: int), joka muodostaa ja palauttaa parametrinaan saamistaan kokonaisluvuista tuplen seuraavien sääntöjen mukaaan:
 
+1. Tuplen ensimmäinen alkio on parametreista pienin
+2. Tuplen toinen alkio on parametreista suurin
+3. Tuplen kolmas alkio on parametrien summa
+
+Esimerkki funktion kutsumisesta:
+```python
+if __name__ == "__main__":
+    print(tee_tuple(5, 3, -1))
+```
+```
+(-1, 5, 7)
+```
 
 [Vastaus](osa05-17c_muodosta_tuple/src)
 
 ## Vanhin henkilöistä
+Tee funktio vanhin(henkilot: list), joka saa parametrikseen listan henkilöitä esittäviä tupleja. Funktio etsii ja palauttaa vanhimman henkilön nimen.
 
+Henkilötuplessa on ensin henkilön nimi merkkijonona ja toisena alkiona henkilön syntymävuosi.
+
+Esimerkiksi:
+```python
+h1 = ("Arto", 1977)
+h2 = ("Einari", 1985)
+h3 = ("Maija", 1953)
+h4 = ("Essi", 1997)
+hlista = [h1, h2, h3, h4]
+
+print(vanhin(hlista))
+```
+```
+Maija
+```
 
 [Vastaus](osa05-18_vanhin_henkiloista/src)
 
 ## Vanhemmat henkilöt
+Oletetaan, että meillä on edelleen käytössä edellisessä tehtävässä esitellyt henkilö-tuplet.
 
+Kirjoita funktio vanhemmat(henkilot: list, vuosi: int), joka palauttaa uuden listan, jolle on tallennettu kaikki ennen annettua vuotta syntyneet henkilöiden nimet parametrina saadulta henkilöiden listalta.
+
+Esimerkiksi:
+```python
+h1 = ("Arto", 1977)
+h2 = ("Einari", 1985)
+h3 = ("Maija", 1953)
+h4 = ("Essi", 1997)
+hlista = [h1, h2, h3, h4]
+
+vanhemmat_henkilot = vanhemmat(hlista, 1979)
+print(vanhemmat_henkilot)
+```
+```
+[ 'Arto', Maija' ]
+```
 
 [Vastaus](osa05-19_vanhemmat_henkilot/src)
 
 ## Opiskelijarekisteri
+Tässä tehtäväsarjassa toteutetaan yksinkertainen opiskelijarekisteri. Ennen ohjelmoinnin aloittamista kannattanee hetki miettiä, minkälaisen tietorakenteen tarvitset ohjelman tallentamien tietojen organisointiin.
 
+### Osa 1: opiskelijoiden lisäys
+Toteuta ensin funktio lisaa_opiskelija uuden opiskelijan lisäämiseen sekä ensimmäinen versio funktiosta tulosta, joka tulostaa yhden opiskelijan tiedot.
+
+Funktioita käytetään seuraavasti:
+```python
+opiskelijat = {}
+lisaa_opiskelija(opiskelijat, "Pekka")
+lisaa_opiskelija(opiskelijat, "Liisa")
+tulosta(opiskelijat, "Pekka")
+tulosta(opiskelijat, "Liisa")
+tulosta(opiskelijat, "Jukka")
+```
+Ohjelma tulostaa tässä vaiheessa
+```
+Pekka:
+ ei suorituksia
+Liisa:
+ ei suorituksia
+ei löytynyt ketään nimellä Jukka
+```
+### Osa 2: suoritusten lisäys
+Tee funktio lisaa_suoritus, jonka avulla opiskelijalle voidaan lisätä kurssin suoritus. Suoritus on tuple, joka koostuu kurssin nimestä ja arvosanasta:
+```python
+opiskelijat = {}
+lisaa_opiskelija(opiskelijat, "Pekka")
+lisaa_suoritus(opiskelijat, "Pekka", ("Ohpe", 3))
+lisaa_suoritus(opiskelijat, "Pekka", ("Tira", 2))
+tulosta(opiskelijat, "Pekka")
+```
+Opiskelijan tietojen tulostus muuttuu, kun suorituksia on lisätty:
+```
+Pekka:
+ suorituksia 2 kurssilta:
+  Ohpe 3
+  Tira 2
+ keskiarvo 2.5
+```
+### Osa 3: arvosanojen korotus
+Suorituksen lisäämisen pitää toimia siten, että se jättää arvosanan 0 suoritukset huomiotta eikä alenna kurssilla ennestään olevaa arvosanaa:
+```python
+opiskelijat = {}
+lisaa_opiskelija(opiskelijat, "Pekka")
+lisaa_suoritus(opiskelijat, "Pekka", ("Ohpe", 3))
+lisaa_suoritus(opiskelijat, "Pekka", ("Tira", 2))
+lisaa_suoritus(opiskelijat, "Pekka", ("Lama", 0))
+lisaa_suoritus(opiskelijat, "Pekka", ("Ohpe", 2))
+tulosta(opiskelijat, "Pekka")
+```
+```
+Pekka:
+ suorituksia 2 kurssilta:
+  Ohpe 3
+  Tira 2
+ keskiarvo 2.5
+```
+### Osa 4: kooste opiskelijoista
+Tee funktio kooste, joka tulostaa koosteen opiskelijoiden suorituksista. Esimerkki:
+```python
+opiskelijat = {}
+lisaa_opiskelija(opiskelijat, "Pekka")
+lisaa_opiskelija(opiskelijat, "Liisa")
+lisaa_suoritus(opiskelijat, "Pekka", ("Lama", 1))
+lisaa_suoritus(opiskelijat, "Pekka", ("Ohpe", 1))
+lisaa_suoritus(opiskelijat, "Pekka", ("Tira", 1))
+lisaa_suoritus(opiskelijat, "Liisa", ("Ohpe", 5))
+lisaa_suoritus(opiskelijat, "Liisa", ("Jtkt", 4))
+kooste(opiskelijat)
+```
+tulostus näyttää seuraavalta
+```
+opiskelijoita 2
+eniten suorituksia 3 Pekka
+paras keskiarvo 4.5 Liisa
+```
 
 [Vastaus](osa05-20_opiskelijarekisteri/src)
 
 ## Kirjainruudukko
+Tämän osan huipentaa suhteellisen haastava ongelmanratkaisua vaativa tehtävä, jonka voi ratkaista monella eri tavalla. Vaikka tehtävä on tupleja käsittelevässä luvussa, tupleja tässä tuskin kannattaa käyttää.
 
+Tee ohjelma, joka tulostaa kirjainruudukon oheisten esimerkkien mukaisesti. Voit olettaa, että kerroksia on enintään 26.
+```
+Kerrokset: 3
+CCCCC
+CBBBC
+CBABC
+CBBBC
+CCCCC
+```
+```
+Kerrokset: 4
+DDDDDDD
+DCCCCCD
+DCBBBCD
+DCBABCD
+DCBBBCD
+DCCCCCD
+DDDDDDD
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
 [Vastaus](osa05-21_kirjainruudukko/src)
 
