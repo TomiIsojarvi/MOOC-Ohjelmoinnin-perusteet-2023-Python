@@ -1,48 +1,48 @@
 # Osa 6 - Tehtävien vastaukset
-## 
+## Suurin luku
 
 
-[Vastaus](osa03-00_tulosta_luvut/src)
+[Vastaus](osa06-01_suurin_luku/src)
 
-## 
-
-
-[Vastaus](osa03-01_lahtolaskenta/src)
-
-## 
+## Hedelmäkauppa
 
 
-[Vastaus](osa03-02_luvut/src)
+[Vastaus](osa06-02_hedelmakauppa/src)
 
-## 
-
-
-[Vastaus](osa03-03_kahden_potenssit/src)
-
-## 
+## Matriisi
 
 
-[Vastaus](osa03-04_luvun_n_potenssit/src)
+[Vastaus](osa06-03_matriisi/src)
 
-## 
-
-
-[Vastaus](osa03-04a_perakkaisten_summa_helpompi/src)
-
-## 
+## Kurssin tulokset, osa 1
 
 
-[Vastaus](osa03-05_perakkaisten_summa/src)
+[Vastaus](osa06-04_kurssin_tulokset_osa1/src)
 
-## 
-
-
-[Vastaus](osa03-05a_monistetut_jonot/src)
-
-## 
+## Kurssin tulokset, osa 2
 
 
-[Vastaus](osa03-05b_pidempi_jono/src)
+[Vastaus](osa06-05_kurssin_tulokset_osa2/src)
+
+## Kurssin tulokset, osa 3
+
+
+[Vastaus](osa06-06_kurssin_tulokset_osa3/src)
+
+## Spell checker
+
+
+[Vastaus](osa06-07_spellchecker/src)
+
+## Reseptihaku
+
+
+[Vastaus](osa06-08_reseptihaku/src)
+
+## Kaupunkipyörät
+
+
+[Vastaus](osa06-09_kaupunkipyorat/src)
 
 ## 
 
