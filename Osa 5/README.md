@@ -178,35 +178,35 @@ True
 
 [Vastaus](osa05-06_sudoku_osa4/src)
 
-## 
+## Alkiot tuplana
 
 
-[Vastaus](osa03-05a_monistetut_jonot/src)
+[Vastaus](osa05-06a_alkiot_tuplana/src)
 
-## 
-
-
-[Vastaus](osa03-05b_pidempi_jono/src)
-
-## 
+## Poista pienin
 
 
-[Vastaus](osa03-05c_lopusta_alkuun/src)
+[Vastaus](osa05-06b_poista_pienin/src)
 
-## 
-
-
-[Vastaus](osa03-06_toinen_ja_toiseksi_viimeinen/src)
-
-## 
+## Sudoku: ruudukon tulostus ja luvun lisäys
 
 
-[Vastaus](osa03-09_risuaitaviiva/src)
+[Vastaus](osa05-07_sudoku_osa5/src)
 
-## 
+## Sudoku: luvun lisäys ruudukon kopioon
 
 
-[Vastaus](osa03-10_risuaitanelio/src)
+[Vastaus](osa05-08_sudoku_osa6/src)
+
+## Ristinolla
+
+
+[Vastaus](osa05-09_ristinolla/src)
+
+## Matriisin kääntö
+
+
+[Vastaus](osa05-10_matriisin_kaanto/src)
 
 ## 
 
