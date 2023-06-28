@@ -424,62 +424,211 @@ vastaus 4
 [Vastaus](osa04-11_vaihteluvali/src)
 
 ## Tulostus tähdillä
+Tee ohjelma, joka pyytää käyttäjää syöttämään merkkijonon ja tulostaa sitten merkkijonon kirjaimet yksitellen allekkain.
 
+Jokaisen kirjaimen jälkeen tulostetaan lisäksi tähti (*) omalle rivilleen.
+
+Esimerkiksi:
+```
+Anna merkkijono: Python
+P
+*
+y
+*
+t
+*
+h
+*
+o
+*
+n
+*
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
 [Vastaus](osa04-11a_tulostus_tahdilla/src)
 
 ## Negatiivisesta positiiviseen
+Tee ohjelma, joka lukee käyttäjältä positiivisen kokonaisluvun N. Ohjelma tulostaa sen jälkeen luvut väliltä -N...N nollaa lukuunottamatta. Jokainen luku tulostetaan omalle rivilleen.
 
+Esimerkiksi
+```
+Anna luku: 4
+-4
+-3
+-2
+-1
+1
+2
+3
+4
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
 [Vastaus](osa04-11b_negatiivisesta_positiiviseen/src)
 
 ## Tähdet
+Tee funktio lista_tahtina, joka saa parametriksi listan kokonaislukuja. Funktio tulostaa joukon tähtirivejä siten, että listalla olevat luvut kertovat kunkin rivin tähtimäärän.
 
+Esim. kutsuttaessa lista_tahtina([3, 7, 1, 1, 2]) tulostus on:
+```
+***
+*******
+*
+*
+**
+```
 
 [Vastaus](osa04-12_tahdet/src)
 
 ## Anagrammi
+Tee funktio anagrammi joka saa parametriksi kaksi merkkijonoa. Funktio palauttaa True, jos merkkijonot ovat anagrammeja eli ne muodostuvat täsmälleen samoista kirjaimista.
 
+Esimerkiksi funktiota voisi käyttää näin:
+```python
+print(anagrammi("talo", "tola")) # True
+print(anagrammi("talo", "lato")) # True
+print(anagrammi("talo", "olat")) # True
+print(anagrammi("tammi", "mitta")) # False
+print(anagrammi("python", "java")) # False
+```
+Vihje: funktio sorted toimii myös merkkijonoille.
 
 [Vastaus](osa04-13_anagrammi/src)
 
 ## Palindromit
+Tee funktio palindromi, joka saa parametriksi merkkijonon ja palauttaa True, jos merkkijono on palindromi (eli samansisältöinen luettuna alusta loppuun tai lopusta alkuun).
 
+Tee myös funktiota hyödyntävä pääohjelma, joka kyselee käyttäjältä sanoja niin kauan, kunnes käyttäjä syöttää palindromin:
+```
+Anna palindromi: python
+ei ollut palindromi
+Anna palindromi: java
+ei ollut palindromi
+Anna palindromi: kauppias
+ei ollut palindromi
+Anna palindromi: saippuakauppias
+saippuakauppias on palindromi!
+```
+Huomaa, että pääohjelmaa ei tule kirjoittaa if __name__ == "__main__":-lohkon sisälle
 
 [Vastaus](osa04-14_palindromit/src)
 
 ## Positiivisten summa
+Tee funktio positiivisten_summa, joka saa parametriksi kokonaislukuja sisältävän listan.
 
+Funktio palauttaa listan positiivisten lukujen summan.
+```python
+lista = [1, -2, 3, -4, 5]
+vastaus = positiivisten_summa(lista)
+print("vastaus", vastaus)
+```
+```
+vastaus 9
+```
 
 [Vastaus](osa04-15_positiivisten_summa/src)
 
 ## Parilliset
+Tee funktio parilliset, joka saa parametriksi kokonaislukuja sisältävän listan.
 
+Funktio palauttaa uuden listan, jolla on parametrina olevan listan sisältämät parilliset luvut.
+```python
+lista = [1, 2, 3, 4, 5]
+uusi_lista = parilliset(lista)
+print("alkuperäinen", lista)
+print("uusi", uusi_lista)
+```
+```
+alkuperäinen [1, 2, 3, 4, 5]
+uusi [2, 4]
+```
 
 [Vastaus](osa04-16_parilliset/src)
 
 ## Summalista
+Tee funktio summa, joka saa parametriksi kaksi kokonaislukuja sisältävää listaa. Molemmissa listoissa on sama määrä alkioita.
 
+Funktio palauttaa uuden listan, jonka alkiot muodostuvat parametreina olevien listojen alkioiden summista.
+
+Esim:
+```python
+a = [1, 2, 3]
+b = [7, 8, 9]
+print(summa(a, b)) # [8, 10, 12]
+```
 
 [Vastaus](osa04-17_summalista/src)
 
 ## Uniikit
+Tee funktio uniikit, joka saa parametriksi kokonaislukuja sisältävän listan.
 
+Funktio palauttaa uuden listan, joka sisältää parametrina annetun listan luvut suuruusjärjestyksessä siten, että jokainen luku on listalla vain kerran.
+```python
+lista = [3, 2, 2, 1, 3, 3, 1]
+print(uniikit(lista)) # [1, 2, 3]
+```
 
 [Vastaus](osa04-18_uniikit/src)
 
 ## Listan pisimmän pituus
+Tee funktio pisimman_pituus, joka saa parametriksi listan merkkijonoja. Funktio palauttaa tiedon mikä on listan pisimmän merkkijonon pituus.
+```python
+lista = ["eka", "toka", "kolmas", "seitsemäs"]
 
+tulos = pisimman_pituus(lista)
+print(tulos)
+```
+```python
+lista = ["pekka", "emilia", "venla", "eero", "antti", "juhani"]
+
+tulos = pisimman_pituus(lista)
+print(tulos)
+```
+```
+9
+6
+```
 
 [Vastaus](osa04-18a_listan_pimman_pituus/src)
 
 ## Listan lyhin
+Tee funktio lyhin, joka saa parametriksi listan merkkijonoja. Funktio palauttaa listan lyhimmän merkkijonon. Jos samanpituisia on useita (testeissä näin ei ole), voi funktio palauttaa niistä minkä vaan. Funktio voi olettaa että listalla ei ole tyhjiä eli nollan pituisia merkkijonoja.
+```python
+lista = ["eka", "toka", "kolmas", "seitsemäs"]
 
+tulos = lyhin(lista)
+print(tulos)
+```
+```python
+lista = ["pekka", "emilia", "johanna", "venla", "eero", "antti"]
+
+tulos = lyhin(lista)
+print(tulos)
+```
+```
+eka
+eero
+```
 
 [Vastaus](osa04-18b_listan_lyhin/src)
 
 ## Listan pisimmät
+Tee funktio pisimmat, joka saa parametriksi listan merkkijonoja. Funktio palauttaa listan, joka sisältää parametrina annetun listan pisimmän merkkijonon. Jos pisimpiä merkkijonoja on useampia, funktio palauttaa ne kaikki listassa.
 
+Merkkijonojen järjestyksen tuloslistassa tulee noudattaa merkkijonojen järjestystä alkuperäisessä listassa.
+```python
+lista = ["eka", "toka", "kolmas", "seitsemäs"]
+
+tulos = pisimmat(lista)
+print(tulos) # ['seitsemäs']
+```
+```python
+lista = ["pekka", "emilia", "venla", "eero", "antti", "juhani"]
+
+tulos = pisimmat(lista)
+print(tulos) # ['emilia', 'juhani']
+```
 
 [Vastaus](osa04-19_listan_pisimmat/src)
 
