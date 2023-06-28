@@ -395,49 +395,209 @@ Funktio ei palauta mitään, vaan muokkaa parametrinaan saamaansa matriisia.
 
 [Vastaus](osa05-10_matriisin_kaanto/src)
 
-## 
+## Kertaa kymmenen
+Tee funktio kertaa_kymmenen(alku: int, loppu: int), joka muodostaa ja palauttaa uuden sanakirjan. Sanakirjassa on avaimina luvut väliltä alku..loppu.
 
+Jokaisen avaimen arvona on avain kerrottuna kymmenellä.
 
-[Vastaus](osa03-11_alleviivaus/src)
+Esimerkiksi:
+```python
+d = kertaa_kymmenen(3, 6)
+print(d)
+```
+```
+{3: 30, 4: 40, 5: 50, 6: 60}
+```
 
-## 
+[Vastaus](osa05-10b_kertaa_kymmenen/src)
 
+## Kertomat
+Tee funktio kertomat(n: int), joka palauttaa lukujen 1..n kertomat sanakirjassa siten, että luku on avain ja luvun kertoma arvo, johon avain viittaa.
 
-[Vastaus](osa03-12_tasaus_oikeaan/src)
+Muistutuksena: luvun n kertoma n! lasketaan kertomalla luku kaikilla itseään pienemmillä positiivisilla kokonaisluvuilla. Luvun 4 kertoma on siis 4 * 3 * 2 * 1 = 24.
 
-## 
+Esimerkki käytöstä:
+```python
+k = kertomat(5)
+print(k[1])
+print(k[3])
+print(k[5])
+```
+```
+1
+6
+120
+```
 
+[Vastaus](osa05-11_kertomat/src)
 
-[Vastaus](osa03-13_sanalaatikko/src)
+## Histogrammi
+Tee funktio histogrammi, joka saa parametrina merkkijonon ja tulostaa merkkijonon eri kirjainten lukumäärää kuvaavan histogrammin, jossa kirjaimen jokaista esiintymää kohti tulostuu yksi tähti kirjaimen riville.
 
-## 
+Esimerkiksi kutsuttaessa histogrammi("abba") tulostus on:
+```
+a **
+b **
+```
+Vastaavasti kutsuttaessa histogrammi("saippuakauppias") tulostus on:
+```
+s **
+a ****
+i **
+p ****
+u **
+k *
+```
 
+[Vastaus](osa05-12_histogrammi/src)
 
-[Vastaus](osa03-07_osajonot1/src)
+## Puhelinluettelo, versio 1
+Tee puhelinluettelo, joka toimii seuraavasti:
+```
+komento (1 hae, 2 lisää, 3 lopeta): 2
+nimi: pekka
+numero: 040-5466745
+ok!
+komento (1 hae, 2 lisää, 3 lopeta): 2
+nimi: emilia
+numero: 045-1212344
+ok!
+komento (1 hae, 2 lisää, 3 lopeta): 1
+nimi: pekka
+040-5466745
+komento (1 hae, 2 lisää, 3 lopeta): 1
+nimi: maija
+ei numeroa
+komento (1 hae, 2 lisää, 3 lopeta): 2
+nimi: pekka
+numero: 09-22223333
+ok!
+komento (1 hae, 2 lisää, 3 lopeta): 1
+nimi: pekka
+09-22223333
+komento (1 hae, 2 lisää, 3 lopeta): 3
+lopetetaan...
+```
 
-## 
+Huomaa, että jokaiseen nimeen voi liittyä vain yksi puhelinnumero. Jos samalle henkilölle lisätään uusi numero, se korvaa aiemmin lisätyn numeron.
 
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
-[Vastaus](osa03-08_osajonot2/src)
+[Vastaus](osa05-13_puhelinluettelo_versio1/src)
 
-## 
+## Puhelinluettelo, versio 2
+Tee puhelinluettelosta paranneltu versio, missä jokaisella henkilöllä voi olla useampia puhelinnumeroita. Ohjelma toimii kuten edellisessä tehtävässä, mutta nyt se listaa jokaisen numeron:
+```
+komento (1 hae, 2 lisää, 3 lopeta): 2
+nimi: pekka
+numero: 040-5466745
+ok!
+komento (1 hae, 2 lisää, 3 lopeta): 2
+nimi: emilia
+numero: 045-1212344
+ok!
+komento (1 hae, 2 lisää, 3 lopeta): 1
+nimi: pekka
+040-5466745
+komento (1 hae, 2 lisää, 3 lopeta): 1
+nimi: maija
+ei numeroa
+komento (1 hae, 2 lisää, 3 lopeta): 2
+nimi: pekka
+numero: 09-22223333
+ok!
+komento (1 hae, 2 lisää, 3 lopeta): 1
+nimi: pekka
+040-5466745
+09-22223333
+komento (1 hae, 2 lisää, 3 lopeta): 3
+lopetetaan...
+```
 
+[Vastaus](osa05-14_puhelinluettelo_versio2/src)
 
-[Vastaus](osa03-13b_loytyvatko_vokaalit/src)
+## Sanakirjan kääntö
+Kirjoita funktio kaanna(sanakirja: dict), joka saa parametrikseen sanakirjan ja kääntää sen niin, että arvoista tulee avaimia ja päinvastoin.
 
-## 
+Esimerkki funktion käytöstä:
+```python
+s = {1: "eka", 2: "toka", 3: "kolmas", 4: "neljas"}
+kaanna(s)
+print(s)
+```
+```
+{"eka": 1, "toka": 2, "kolmas": 3, "neljas": 4}
+```
 
+Huomaa, että tämä pitää paikkansa myös parametrina oleville sanakirjoille!
 
-[Vastaus](osa03-13c_osajonon_haku/src)
+Jos kohtaat tehtävässä ongelmia, katso visualisaattorilla mitä koodisi tekee.
 
-## 
+[Vastaus](osa05-15_sanakirjan_kaanto/src)
 
+## Luvut sanoina
+Kirjoita funktio lukukirja(), joka palauttaa uuden sanakirjan. Palautettu rakenne sisältää avaimina luvut nollasta 99:ään. Sanakirjan arvoina ovat luvut kirjaimin kirjoitettuna. Katso esimerkkiä alla:
+```python
+luvut = lukukirja()
+print(luvut[2])
+print(luvut[11])
+print(luvut[45])
+print(luvut[99])
+print(luvut[0])
+```
+```
+kaksi
+yksitoista
+neljäkymmentäviisi
+yhdensänkymmentäyhdeksän
+nolla
+```
+HUOM! Älä muodosta jokaista lukusanaa yksitellen, vaan mieti, miten voisit hyödyntää silmukoita ja sanakirjaa jotenkin ratkaisussasi!
 
-[Vastaus](osa03-14_osajonojen_haku/src)
+[Vastaus](osa05-16_luvut_sanoina/src)
 
-## 
+## Elokuvarekisteri
+Kirjoita funktio lisaa_elokuva(rekisteri: list, nimi: str, ohjaaja: str, vuosi: int, pituus: int), joka lisää yhden elokuvaolion elokuvarekisteriin.
 
-[Vastaus](osa03-15_toinen_esiintyma/src)
+Rekisteri on toteutettu listana, ja jokainen listan alkio on yksi sanakirja. Sanakirjassa on seuraavat avaimet:
+
+- nimi
+- ohjaaja
+- vuosi
+- pituus
+  
+Arvot tulevat metodin parametreina.
+
+Esimerkki:
+```python
+rekisteri = []
+lisaa_elokuva(rekisteri, "Pythonin viemää", "Pekka Python", 2017, 116)
+lisaa_elokuva(rekisteri, "Python lentokoneessa", "Renny Pytholin", 2001, 94)
+print(rekisteri)
+```
+```
+[{"nimi": "Pythonin viemää", "ohjaaja": "Pekka Python", "vuosi": 2017, "pituus": 116}, {"nimi": "Python lentokoneessa", "ohjaaja": "Renny Pytholin", "vuosi": 2001, "pituus": 94}]
+```
+
+[Vastaus](osa05-17_elokuvarekisteri/src)
+
+## Etsi elokuvat
+Kirjoita funktio etsi_elokuvat(rekisteri: list, hakusana: str), joka käsittelee edellisessä tehtävässä luotua elokuvarekisteriä. Funktio muodostaa uuden listan, jolle kopioidaan rekisteristä ne elokuvat, joiden nimestä löytyy hakusana. Pienet ja isot kirjaimet eivät merkitse haussa, joten hakusanalla paj pitää löytyä sekä elokuva Tappajahai että elokuva Pajatoiminnan historia.
+
+Esimerkki:
+```python
+rekisteri = [{"nimi": "Pythonin viemää", "ohjaaja": "Pekka Python", "vuosi": 2017, "pituus": 116},
+{"nimi": "Python lentokoneessa", "ohjaaja": "Renny Pythonen", "vuosi": 2001, "pituus": 94},
+{"nimi": "Koodaajien yö", "ohjaaja": "M. Night Python", "vuosi": 2011, "pituus": 101}]
+
+lista = etsi_elokuvat(rekisteri, "python")
+print(lista)
+```
+```
+[{"nimi": "Pythonin viemää", "ohjaaja": "Pekka Python", "vuosi": 2017, "pituus": 116}, {"nimi": "Python lentokoneessa", "ohjaaja": "Renny Pythonen", "vuosi": 2001, "pituus": 94}]
+```
+
+[Vastaus](osa05-17b_etsi_elokuvat/src)
 
 ## 
 
