@@ -150,77 +150,287 @@ Voit olettaa, että käyttäjän antama luku on 2 tai suurempi.
 [Vastaus](osa03-05_perakkaisten_summa/src)
 
 ## Monta jonoa
+Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonon ja määrän ja tulostaa sitten annettua merkkijonoa annetun määrän. Tulostuksen tulee tapahtua yhdelle riville yhteen pötköön.
 
+Esimerkkisuoritus:
+```
+Anna merkkijono: heippa
+Anna määrä: 4
+heippaheippaheippaheippa
+```
 
 [Vastaus](osa03-05a_monistetut_jonot/src)
 
 ## Pidempi jono
+Kirjoita ohjelma, joka kysyy käyttäjältä kaksi merkkijonoa ja tulostaa jonoista pidemmän (ts. sen, jossa on enemmän merkkejä). Jos jonot ovat yhtä pitkiä tulostetaan viesti "Jonot ovat yhtä pitkät"
 
+Esimerkkisuorituksia:
+```
+Anna jono 1: moi
+Anna jono 2: heippa
+heippa on pidempi
+```
+```
+Anna jono 1: moikkelis koikkelis
+Anna jono 2: heipparallaa
+moikkelis koikkelis on pidempi
+```
+```
+Anna jono 1: moi
+Anna jono 2: hei
+Jonot ovat yhtä pitkät
+```
 
 [Vastaus](osa03-05b_pidempi_jono/src)
 
 ## Lopusta alkuun
+Kirjoita ohjelma, joka kysyy käyttäjältä merkkijonon ja tulostaa sitten merkkijonon merkit allekkain käänteisessä järjestyksessä lopusta alkuun.
 
+Esimerkkisuoritus:
+```
+Anna merkkijono: heippa
+a
+p
+p
+i
+e
+h
+```
 
 [Vastaus](osa03-05c_lopusta_alkuun/src)
 
 ## Toinen ja toiseksi viimeinen
-
+Tee ohjelma, joka kysyy käyttäjältä sanan ja kertoo, ovatko sen toinen ja toiseksi viimeinen merkki samoja.
+```
+Anna sana: python
+Toinen ja toiseksi viimeinen kirjain eroavat
+```
+```
+Anna sana: pascal
+Toinen ja toiseksi viimeinen kirjain on a
+```
 
 [Vastaus](osa03-06_toinen_ja_toiseksi_viimeinen/src)
 
 ## Risuaitaviiva
+Tee ohjelma, joka piirtää käyttäjän määräämän levyisen risuaitaviivan.
+```
+Leveys: 3
 
+###
+```
+```
+Leveys: 8
+
+########
+```
 
 [Vastaus](osa03-09_risuaitaviiva/src)
 
 ## Risuaitasuorakulmio
-
+Laajenna edellistä niin, että käyttäjä syöttää myös piirrettävien rivien määrän
+```
+Leveys: 10
+Korkeus: 3
+##########
+##########
+##########
+```
 
 [Vastaus](osa03-10_risuaitanelio/src)
 
 ## Alleviivaus
+Tee ohjelma, joka pyytää käyttäjältä merkkijonoja ja tulostaa kunkin merkkijonon oheisen esimerkin mukaisesti alleviivattuna. Ohjelman suoritus päättyy, kun käyttäjä syöttää tyhjän merkkijonon, eli merkkijonon jonka pituus on 0.
+```
+Anna merkkijono: Moi kaikki!
 
+Moi kaikki!
+-----------
+Anna merkkijono: Tämä on testijono
+
+Tämä on testijono
+-----------------
+Anna merkkijono: a
+
+a
+-
+Anna merkkijono:
+```
 
 [Vastaus](osa03-11_alleviivaus/src)
 
 ## Tasaus oikeaan
+Tee ohjelma, joka kysyy käyttäjältä merkkijonon ja tulostaa sen niin, että tulostetuksi tulee tasan 20 merkkiä. Jos merkkijono on lyhyempi, alkuun tulee tarvittava määrä tähtiä *.
 
+Voit olettaa, että syötetyssä merkkijonossa on enintään 20 merkkiä.
+```
+Sana: python
+
+**************python
+```
+```
+Sana: pitkämerkkijono
+
+*****pitkämerkkijono
+```
+```
+Sana: tosipitkämerkkijono
+
+*tosipitkämerkkijono
+```
 
 [Vastaus](osa03-12_tasaus_oikeaan/src)
 
 ## Sanalaatikko
+Tee ohjelma, joka kysyy käyttäjältä sanaa ja tulostaa sanan tähtiraameihin, joissa sana on keskellä. Raamien leveys on 30 merkkiä, ja voit olettaa, että sana mahtuu raameihin.
 
+Huom! Jos sanan pituus on pariton, voit tulostaa sanan kumpaan tahansa mahdollisista keskikohdista.
+```
+Sana: koe
+
+******************************
+*            koe             *
+******************************
+```
+```
+Sana: python
+
+******************************
+*           python           *
+******************************
+```
 
 [Vastaus](osa03-13_sanalaatikko/src)
 
 ## Osajonot 1
+Tee ohjelma, joka kysyy käyttäjältä merkkijonon ja tulostaa sitten kaikki sen ensimmäisestä merkistä alkavat osajonot pituusjärjestyksessä.
 
+Esimerkkitulostus:
+```
+Anna merkkijono: testi
+t
+te
+tes
+test
+testi
+```
 
 [Vastaus](osa03-07_osajonot1/src)
 
 ## Osajonot 2
+Tee ohjelma, joka kysyy käyttäjältä merkkijonon ja tulostaa sitten kaikki sen viimeiseen merkkiin päättyvät osajonot pituusjärjestyksessä.
 
+Esimerkkitulostus:
+```
+Anna merkkijono: testi
+i
+ti
+sti
+esti
+testi
+```
 
 [Vastaus](osa03-08_osajonot2/src)
 
 ## Löytyvätkö vokaalit
+Tee ohjelma, joka kysyy käyttäjältä merkkijonon ja tulostaa sitten tiedon löytyvätkö vokaalit a, e ja o merkkijonosta.
 
+Voit olettaa, että merkkijono on syötetty kokonaan pienillä kirjaimilla. Katso mallia esimerkkitulostuksesta.
+
+Esimerkkitulostus:
+```
+Anna merkkijono: heippa sulle
+a löytyy
+e löytyy
+o ei löydy
+```
+```
+Anna merkkijono: moi
+a ei löydy
+e ei löydy
+o löytyy
+```
 
 [Vastaus](osa03-13b_loytyvatko_vokaalit/src)
 
 ## Ensimmäisen osajonon haku
-
+Tee ohjelma, joka kysyy käyttäjältä merkkijonoa ja yksittäistä merkkiä. Ohjelma tulostaa merkkijonosta löytyvän ensimmäisen kolmen merkin pituisen osajonon, jonka alkukirjain on käyttäjän syöttämä merkki. Voit olettaa, että merkkijono on vähintään kolmen merkin pituinen.
+```
+Sana: apinatalo
+Merkki: a
+api
+```
+```
+Sana: banaani
+Merkki: n
+naa
+```
+```
+Sana: tomaatti
+Merkki: x
+```
+```
+Sana: python
+Merkki: n
+```
 
 [Vastaus](osa03-13c_osajonon_haku/src)
 
 ## Kaikkien osajonojen haku
-
+Tee edellisestä ohjelmasta laajennettu versio, joka tulostaa kaikki merkkijonon sisältämät kolmen merkin pituiset osajonot, joiden alkukirjain on käyttäjän syöttämä merkki. Voit olettaa, että merkkijono on vähintään kolmen merkin pituinen.
+```
+Sana: apinatalo
+Merkki: a
+api
+ata
+alo
+```
+```
+Sana: banaani
+Merkki: n
+naa
+```
+Vihje seuraava esimerkki saattaa antaa jotain inspiraatiota eräästä tavasta miten tätä tehtävää voi lähestyä
+```python
+sana = input("Sana: ")
+while True:
+    if len(sana) == 0:
+        break
+    print(sana)
+    sana = sana[2:]
+```
+```
+Sana: apinatalo
+apinatalo
+inatalo
+atalo
+alo
+o
+```
 
 [Vastaus](osa03-14_osajonojen_haku/src)
 
 ## Toinen esiintymä
+Tee ohjelma, joka etsii merkkijonosta osajonon toisen esiintymän. Jos toista (tai edes ensimmäistä) esiintymää ei löydy, ohjelma tulostaa tästä tiedon.
 
+Määritellään tässä yhteydessä, että esiintymät eivät voi mennä päällekkäin, merkkijonossa aaaa osajonon aa toinen esiintymä löytyy siis indeksin 2 kohdalta.
+
+Muutama esimerkkisuoritus:
+```
+Anna merkkijono: abcabc
+Anna osajono: ab
+Osajonon toinen esiintymä on kohdassa 3.
+```
+```
+Anna merkkijono: saippuakauppias
+Anna osajono: a
+Osajonon toinen esiintymä on kohdassa 6.
+```
+```
+Anna merkkijono: aybabtu
+Anna osajono: ba
+Osajono ei esiinny merkkijonossa kahdesti.
+```
 
 [Vastaus](osa03-15_toinen_esiintyma/src)
 
