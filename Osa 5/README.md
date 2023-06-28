@@ -599,62 +599,28 @@ print(lista)
 
 [Vastaus](osa05-17b_etsi_elokuvat/src)
 
-## 
+## Muodosta tuple
 
 
-[Vastaus](osa03-15b_kertotaulut/src)
+[Vastaus](osa05-17c_muodosta_tuple/src)
 
-## 
-
-
-[Vastaus](osa03-16_sanojen_ensimmaiset_kirjaimet/src)
-
-## 
+## Vanhin henkilöistä
 
 
-[Vastaus](osa03-17_kertomat/src)
+[Vastaus](osa05-18_vanhin_henkiloista/src)
 
-## 
-
-
-[Vastaus](osa03-18_parit_ympari/src)
-
-## 
+## Vanhemmat henkilöt
 
 
-[Vastaus](osa03-19_vuorotellen/src)
+[Vastaus](osa05-19_vanhemmat_henkilot/src)
 
-## 
-
-[Vastaus](osa03-21_seitseman_veljesta/src)
-
-## 
+## Opiskelijarekisteri
 
 
-[Vastaus](osa03-22_ensimmainen_merkki/src)
+[Vastaus](osa05-20_opiskelijarekisteri/src)
 
-## 
-
-
-[Vastaus](osa03-25_keskiarvo/src)
-
-## 
+## Kirjainruudukko
 
 
-[Vastaus](osa03-24_monta_tulostusta/src)
-
-## 
-
-
-[Vastaus](osa03-23_risunelio/src)
-
-## 
-
-
-[Vastaus](osa03-26_shakkilauta/src)
-
-## 
-
-
-[Vastaus](osa03-27_sananelio/src)
+[Vastaus](osa05-21_kirjainruudukko/src)
 
