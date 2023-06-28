@@ -434,3 +434,108 @@ Osajono ei esiinny merkkijonossa kahdesti.
 
 [Vastaus](osa03-15_toinen_esiintyma/src)
 
+## Kertotaulut
+Tee ohjelma, joka kysyy käyttäjältä positiivisen kokonaisluvun. Ohjelma tulostaa esimerkkitulostuksen mukaisesti kertolaskuja lukuun asti:
+
+Esimerkkisuorituksia:
+```
+Anna luku: 2
+1 x 1 = 1
+1 x 2 = 2
+2 x 1 = 2
+2 x 2 = 4
+```
+```
+Anna luku: 3
+1 x 1 = 1
+1 x 2 = 2
+1 x 3 = 3
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+```
+
+[Vastaus](osa03-15b_kertotaulut/src)
+
+## Sanojen ensimmäiset kirjaimet
+Tee ohjelma, joka kysyy käyttäjältä lauseen. Ohjelma tulostaa jokaisen sanan ensimmäisen kirjaimen ruudulle omille riveilleen.
+
+Esimerkkisuoritus:
+```
+Anna lause: Vesihiisi sihisi hississä
+V
+s
+h
+```
+
+[Vastaus](osa03-16_sanojen_ensimmaiset_kirjaimet/src)
+
+## Kertomat
+Tee ohjelma, joka kysyy käyttäjältä kokonaisluvun. Jos käyttäjä syöttää negatiivisen luvun tai nollan, ohjelman suoritus päättyy. Muuten ohjelma tulostaa luvun kertoman.
+
+Kertoma lasketaan kertomalla keskenään luku ja kaikki sitä pienemmät positiiviset kokonaisluvut. Esim. luvun 5 kertoma on 1 * 2 * 3 * 4 * 5 = 120.
+
+Esimerkkisuorituksia:
+```
+Anna luku: 3
+Luvun 3 kertoma on 6
+Anna luku: 4
+Luvun 4 kertoma on 24
+Anna luku: -1
+Kiitos ja moi!
+```
+```
+Anna luku: 1
+Luvun 1 kertoma on 1
+Anna luku: 0
+Kiitos ja moi!
+```
+
+[Vastaus](osa03-17_kertomat/src)
+
+## Parit ympäri
+Tee ohjelma, joka tulostaa luvut 1:stä käyttäjän antamaan lukuun. Luvut on kuitenkin käännetty pareittain ympäri.
+```
+Anna luku: 5
+2
+1
+4
+3
+5
+```
+```
+Anna luku: 6
+2
+1
+4
+3
+6
+5
+```
+
+[Vastaus](osa03-18_parit_ympari/src)
+
+## Vuorotellen
+Tee ohjelma, joka kysyy käyttäjältä luvun ja tulostaa sitten lukuja vuorotellen seuraavien esimerkkien mukaisesti.
+```
+Anna luku: 5
+1
+5
+2
+4
+3
+```
+```
+Anna luku: 6
+1
+6
+2
+5
+3
+4
+```
+
+[Vastaus](osa03-19_vuorotellen/src)
