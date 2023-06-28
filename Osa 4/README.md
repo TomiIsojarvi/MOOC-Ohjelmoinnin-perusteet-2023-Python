@@ -632,18 +632,50 @@ print(tulos) # ['emilia', 'juhani']
 
 [Vastaus](osa04-19_listan_pisimmat/src)
 
-## 
+## Lukulistasta merkkijonolistaksi
+Kirjoita funktio muotoile, joka saa parametrikseen liukulukuja sisältävän listan. Funktio muodostaa listan perusteella uuden merkkijonoja sisältävän listan, jossa jokainen liukulukulistan alkio esitetään pyöristettynä kahden desimaalin tarkkuuteen. Listan alkioiden järjestyksen tulee säilyä.
+
+Vinkki: Käytä liukulukujen muotoiluun merkkijonoiksi f-merkkijonoa.
+
+Esimerkki funktion käytöstä:
+```python
+lista = [1.234, 0.3333, 0.11111, 3.446]
+lista2 = muotoile(lista)
+print(lista2)
+```
+```
+['1.23', '0.33', '0.11', '3.45']
+```
+
+[Vastaus](osa04-20_lukulistasta_merkkijonolistaksi/src)
+
+## Kaikki väärinpäin
 
 
-[Vastaus](osa03-23_risunelio/src)
+[Vastaus](osa04-21_kaikki_vaarinpain/src)
 
-## 
-
-
-[Vastaus](osa03-26_shakkilauta/src)
-
-## 
+## Eniten kirjaimia
 
 
-[Vastaus](osa03-27_sananelio/src)
+[Vastaus](osa04-22_eniten_kirjaimia/src)
+
+## Vokaalit pois
+
+
+[Vastaus](osa04-23_vokaalit_pois/src)
+
+## Poista isot
+
+
+[Vastaus](osa04-24_poista_isot/src)
+
+## Naapureita listassa
+
+
+[Vastaus](osa04-25_naapureita_listassa/src)
+
+## Arvosanatilasto
+
+
+[Vastaus](osa04-26_arvosanatilasto/src)
 
