@@ -149,78 +149,78 @@ Voit olettaa, että käyttäjän antama luku on 2 tai suurempi.
 
 [Vastaus](osa03-05_perakkaisten_summa/src)
 
-## 
+## Monta jonoa
 
 
-[Vastaus](osa02-08_ian_tarkistus/src)
+[Vastaus](osa03-05a_monistetut_jonot/src)
 
-## 
-
-
-[Vastaus](osa02-09_veljenpojat/src)
-
-## 
+## Pidempi jono
 
 
-[Vastaus](osa02-10_arvosana_ja_pisteet/src)
+[Vastaus](osa03-05b_pidempi_jono/src)
 
-## 
-
-
-[Vastaus](osa02-11_fizzbuzz/src)
-
-## 
+## Lopusta alkuun
 
 
-[Vastaus](osa02-12_karkausvuosi/src)
+[Vastaus](osa03-05c_lopusta_alkuun/src)
 
-## 
-
-
-[Vastaus](osa02-13_aakkosjarjestyksessa_keskimmainen/src)
-
-## 
+## Toinen ja toiseksi viimeinen
 
 
-[Vastaus](osa02-14_lahjaverolaskuri/src)
+[Vastaus](osa03-06_toinen_ja_toiseksi_viimeinen/src)
 
-## 
-
-
-[Vastaus](osa02-15_jatketaanko/src)
-
-## 
+## Risuaitaviiva
 
 
-[Vastaus](osa02-16_syotteen_rajaus/src)
+[Vastaus](osa03-09_risuaitaviiva/src)
 
-## 
-
-
-[Vastaus](osa02-17_lahtolaskenta/src)
-
-## 
+## Risuaitasuorakulmio
 
 
-[Vastaus](osa02-18_salasana_uudelleen/src)
+[Vastaus](osa03-10_risuaitanelio/src)
 
-## 
-
-
-[Vastaus](osa02-19_pin_ja_yritysten_maara/src)
-
-## 
+## Alleviivaus
 
 
-[Vastaus](osa02-20_seuraava_karkausvuosi/src)
+[Vastaus](osa03-11_alleviivaus/src)
 
-## 
-
-
-[Vastaus](osa02-21_tarina/src)
-
-## 
+## Tasaus oikeaan
 
 
-[Vastaus](osa02-22_lukujen_kasittelya/src)
+[Vastaus](osa03-12_tasaus_oikeaan/src)
+
+## Sanalaatikko
+
+
+[Vastaus](osa03-13_sanalaatikko/src)
+
+## Osajonot 1
+
+
+[Vastaus](osa03-07_osajonot1/src)
+
+## Osajonot 2
+
+
+[Vastaus](osa03-08_osajonot2/src)
+
+## Löytyvätkö vokaalit
+
+
+[Vastaus](osa03-13b_loytyvatko_vokaalit/src)
+
+## Ensimmäisen osajonon haku
+
+
+[Vastaus](osa03-13c_osajonon_haku/src)
+
+## Kaikkien osajonojen haku
+
+
+[Vastaus](osa03-14_osajonojen_haku/src)
+
+## Toinen esiintymä
+
+
+[Vastaus](osa03-15_toinen_esiintyma/src)
 
