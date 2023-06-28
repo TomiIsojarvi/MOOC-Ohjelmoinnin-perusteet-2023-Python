@@ -1,4 +1,4 @@
-# Osa 1 - Tehtävien vastaukset
+# Osa 2 - Tehtävien vastaukset
 ## Hymiö
 Kirjoita ohjelma, joka tulostaa ruudulle hymiön: :-)
 ## Korjaa ohjelma: seitsemän veljestä
