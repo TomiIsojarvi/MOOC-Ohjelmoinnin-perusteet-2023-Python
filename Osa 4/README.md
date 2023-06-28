@@ -275,45 +275,153 @@ print(vika_sana(lause)) # kerran
 
 [Vastaus](osa04-07_eka_toka_vika_sana/src)
 
-## 
+## Alkioiden arvojen muutokset
+Tee ohjelma, joka alustaa listan jossa on arvot [1, 2, 3, 4, 5]. Tämän jälkeen ohjelma kysyy käyttäjältä alkion indeksin ja uuden arvon, vaihtaa kyseisen alkion arvon ja tulostaa listan uudelleen. Ohjelman suoritus päättyy, jos käyttäjä antaa alkion indeksiksi -1.
 
+Esimerkkisuoritus:
+```
+Anna indeksi: 0
+Anna arvo: 10
+[10, 2, 3, 4, 5]
+Anna indeksi: 2
+Anna arvo: 250
+[10, 2, 250, 4, 5]
+Anna indeksi: 4
+Anna arvo: -45
+[10, 2, 250, 4, -45]
+Anna indeksi: -1
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
-[Vastaus](osa03-09_risuaitaviiva/src)
+[Vastaus](osa04-07a_alkioiden_arvojen_muutokset/src)
 
-## 
+## Alkioiden lisäys listaan
+Tee ohjelma, joka kysyy käyttäjältä ensin lukujen määrän. Sen jälkeen ohjelma pyytää käyttäjää syöttämään annetun määrän lukuja yksitellen ja lisää ne listaan samassa järjestyksessä.
 
+Lopuksi lista tulostetaan.
 
-[Vastaus](osa03-10_risuaitanelio/src)
+Esimerkkisuoritus:
+```
+Kuinka monta lukua: 3
+Anna luku 1: 10
+Anna luku 2: 250
+Anna luku 3: 34
+[10, 250, 34]
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
-## 
+[Vastaus](osa04-07b_alkoiden_lisays_listaan/src)
 
+## Lisäys ja poisto
+Tee ohjelma, joka pyytää käyttäjää valitsemaan alkion lisäyksen tai poiston. Sekä lisäys että poisto tehdään listan loppuun. Lisättävän alkion arvo on aina yhtä suurempi kuin listan viimeinen alkio (tai 1, jos listassa ei ole alkioita).
 
-[Vastaus](osa03-11_alleviivaus/src)
+Joka operaation välissä lista tulostetaan. Katso esimerkkiä seuraavasta tulosteesta:
+```
+Lista on nyt []
+(l)isää, (p)oista vai e(x)it: l
+Lista on nyt [1]
+(l)isää, (p)oista vai e(x)it: l
+Lista on nyt [1, 2]
+(l)isää, (p)oista vai e(x)it: l
+Lista on nyt [1, 2, 3]
+(l)isää, (p)oista vai e(x)it: p
+Lista on nyt [1, 2]
+(l)isää, (p)oista vai e(x)it: l
+Lista on nyt [1, 2, 3]
+(l)isää, (p)oista vai e(x)it: x
+Moi!
+```
+Voit olettaa, että listalta ei yritetä poistaa alkioita, jos lista on tyhjä.
 
-## 
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
+[Vastaus](osa04-07c_lisays_ja_poisto/src)
 
-[Vastaus](osa03-12_tasaus_oikeaan/src)
+## Sama sana kahdesti
+Tee ohjelma, joka kyselee käyttäjältä sanoja. Kun käyttäjä syöttää jonkin sanan kahdesti, ohjelma tulostaa eri sanojen määrän ja lopettaa toimintansa.
+```
+sana: olipa
+sana: kerran
+sana: kauan
+sana: sitten
+sana: kerran
+Annoit 4 eri sanaa
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
-## 
+[Vastaus](osa04-08_sama_sana_kahdesti/src)
 
+## Lista kahdesti
+Tee ohjelma, joka kysyy käyttäjältä lukuja ja lisää niitä listaan. Lista tulostetaan jokaisen luvun lisäyksen jälkeen kahdella eri tavalla:
 
-[Vastaus](osa03-13_sanalaatikko/src)
+- alkiot lisäysjärjestyksessä ja
+- järjestettynä pienimmästä suurimpaan alkioon
+Ohjelman suoritus päättyy, kun käyttäjä syöttää luvun 0.
 
-## 
+Esimerkkisuoritus:
+```
+Anna luku: 3
+Lista: [3]
+Järjestettynä: [3]
+Anna luku: 1
+Lista: [3, 1]
+Järjestettynä: [1, 3]
+Anna luku: 9
+Lista: [3, 1, 9]
+Järjestettynä: [1, 3, 9]
+Anna luku: 5
+Lista: [3, 1, 9, 5]
+Järjestettynä: [1, 3, 5, 9]
+Anna luku: 0
+Moi!
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
+[Vastaus](osa04-08b_lista_kahdesti/src)
 
-[Vastaus](osa03-07_osajonot1/src)
+## Listan pituus
+Tee funktio pituus, joka palauttaa parametrinaan saamansa listan pituuden.
+```python
+lista = [1, 2, 3, 4, 5]
+vastaus = pituus(lista)
+print("vastaus", vastaus)
 
-## 
+# huomaa, että voit kutsua funktiota myös antamalla listan suoraan funktion parametriksi
+vastaus = pituus([1, 1, 1, 1])
+print("vastaus", vastaus)
+```
+```
+vastaus 5
+vastaus 4
+```
 
+[Vastaus](osa04-09_listan_pituus/src)
 
-[Vastaus](osa03-08_osajonot2/src)
+## Keskiarvo
+Tee funktio keskiarvo, joka palauttaa parametrinaan saamansa kokonaislukuja sisältävän listan alkioiden keskiarvon.
+```python
+lista = [1, 2, 3, 4, 5]
+vastaus = keskiarvo(lista)
+print("vastaus", vastaus)
+```
+```
+vastaus 3.0
+```
 
-## 
+[Vastaus](osa04-10_keskiarvo/src)
 
+## Vaihteluväli
+Tee funktio vaihteluvali, joka palauttaa parametrinaan saamansa kokonaislukuja sisältävän listan vaihteluvälin (eli suurimman ja pienimmän alkion erotuksen).
+```python
+lista = [1, 2, 3, 4, 5]
+vastaus = vaihteluvali(lista)
+print("vastaus", vastaus)
+```
+```
+vastaus 4
+```
 
-[Vastaus](osa03-13b_loytyvatko_vokaalit/src)
+[Vastaus](osa04-11_vaihteluvali/src)
 
 ## 
 
