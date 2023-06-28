@@ -539,3 +539,147 @@ Anna luku: 6
 ```
 
 [Vastaus](osa03-19_vuorotellen/src)
+
+## Seitsemän veljestä
+Tee funktio seitseman_veljesta jonka kutsuminen tulostaa seitsemän veljeksen nimet aakkosjärjestyksessä:
+```
+Aapo
+Eero
+Juhani
+Lauri
+Simeoni
+Timo
+Tuomas
+```
+
+[Vastaus](osa03-21_seitseman_veljesta/src)
+
+## Ensimmäinen merkki
+Täydennä koodipohjassa oleva funktio ensimmainen siten, että se tulostaa parametrinaan saamansa merkkijonon ensimmäisen merkin.
+```python
+def ensimmainen(merkkijono):
+     # kirjoita koodia tähän
+
+# kokeillaan funktiota:
+if __name__ == "__main__":
+    ensimmainen('python')
+    ensimmainen('yhtälö')
+    ensimmainen('tieto')
+    ensimmainen('huominen')
+    ensimmainen('omena')
+    ensimmainen('nukkumaanmenoaika')
+```
+```
+p
+y
+t
+h
+o
+n
+```
+
+[Vastaus](osa03-22_ensimmainen_merkki/src)
+
+## Keskiarvo
+Tee funktio keskiarvo, joka saa parametrina kolme kokonaislukua. Funktio tulostaa parametriensa keskiarvon.
+```
+keskiarvo(5, 3, 1)
+keskiarvo(10, 1, 1)
+```
+```
+3.0
+4.0
+```
+
+[Vastaus](osa03-25_keskiarvo/src)
+
+## Monta tulostusta
+Tee funktio tulosta_monesti(merkkijono, kertaa), joka saa parametriksi merkkijonon sekä kokonaisluvun, joka kertoo, montako kertaa funktion tulee tulostaa parametrina saamansa merkkijono:
+```python
+tulosta_monesti("hei", 5)
+
+print()
+
+merkkijono = "Alussa olivat suo, kuokka ja Python"
+kertaa = 3
+tulosta_monesti(merkkijono, kertaa)
+```
+```
+hei
+hei
+hei
+hei
+hei
+
+Alussa olivat suo, kuokka ja Python.
+Alussa olivat suo, kuokka ja Python.
+Alussa olivat suo, kuokka ja Python.
+```
+
+[Vastaus](osa03-24_monta_tulostusta/src)
+
+## Risuneliö
+Tee funktio risunelio(pituus) joka saa parametriksi kokonaisluvun, joka kertoo kuinka suuri risuneliö funktion pitää tulostaa:
+```python
+risunelio(3)
+print()
+risunelio(5)
+```
+```
+###
+###
+###
+
+#####
+#####
+#####
+#####
+#####
+```
+
+[Vastaus](osa03-23_risunelio/src)
+
+## Shakkilauta
+Tee funktio shakkilauta, joka tulostaa shakkilaudan numeroista 0 ja 1 alla olevien esimerkkien mukaisesti.
+```python
+shakkilauta(3)
+print()
+shakkilauta(6)
+```
+```
+101
+010
+101
+
+101010
+010101
+101010
+010101
+101010
+010101
+
+```
+
+[Vastaus](osa03-26_shakkilauta/src)
+
+## Sananeliö
+Tee funktio nelio, joka tulostaa sananeliön alla olevien esimerkkien mukaisesti.
+```python
+nelio("ab", 3)
+print()
+nelio("aybabtu", 5)
+```
+```
+aba
+bab
+aba
+
+aybab
+tuayb
+abtua
+ybabt
+uayba
+```
+
+[Vastaus](osa03-27_sananelio/src)
+
