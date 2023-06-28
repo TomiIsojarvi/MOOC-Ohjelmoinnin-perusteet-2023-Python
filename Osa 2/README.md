@@ -1,7 +1,7 @@
 # Osa 2 - Tehtävien vastaukset
 ## Korjaa virheet
 Seuraavassa ohjelmassa on useita syntaksivirheitä. Korjaa ohjelma siten, että syntaksi on kunnossa ja se toimii alla olevien esimerkkien mukaisesti.
-```
+```python
   luku = input("Anna luku: ")
   if luku>100
     print("Luku oli suurempi kuin sata")
@@ -28,7 +28,7 @@ Hyvää päivänjatkoa!
 Funktiolla len voidaan laskea (muun muassa) merkkijonon pituus. Funktio palauttaa merkkijonossa olevien merkkien määrän.
 
 Esimerkkejä funktion toiminnasta:
-```
+```python
 sana = "abcd"
 print(len(sana))
 
@@ -52,7 +52,6 @@ print(pituus)
 Tee ohjelma, joka lukee käyttäjältä sanan ja tulostaa sanan merkkien määrän, mikäli niitä on enemmän kuin yksi.
 
 Esimerkkisuorituksia:
-
 ```
 Anna sana: hei
 Sanassa hei on 3 kirjainta
@@ -69,7 +68,7 @@ Kiitos!
 ```
 ## Tyyppimuunnos
 Pythonissa voidaan usein muuntaa jokin arvo tyypistä toiseen. Esimerkiksi liukuluku voidaan muuntaa kokonaisluvuksi funktion int avulla:
-```
+```python
 lampo = float(input("Anna lämpötila: "))
 
 print("Lämpötila on", lampo)
@@ -343,7 +342,7 @@ ei sitten
 Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta.
 
 Mikäli luku on positiivinen, ohjelma tulostaa luvun neliöjuuren käyttäen sqrt-funktiota, joka on tuotu ohjelmaan import-lauseella. Esimerkki funktion käytöstä:
-```
+```python
 # Tämä pitää olla ohjelman alussa, jotta sqrt toimii
 from math import sqrt
 
@@ -367,7 +366,7 @@ Lopetetaan...
 ```
 ## Lähtölaskenta
 Tehtäväpohjassa olevan ohjelman
-```
+```python
 luku = 5
 print("Lähtölaskenta!")
 while True:
