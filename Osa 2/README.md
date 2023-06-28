@@ -24,6 +24,9 @@ Arvo on nyt 1
 1 taitaa olla onnenlukuni!
 Hyvää päivänjatkoa!
 ```
+
+[Vastaus](osa02-01_korjaa_virheet/src)
+
 ## Merkkien määrä
 Funktiolla len voidaan laskea (muun muassa) merkkijonon pituus. Funktio palauttaa merkkijonossa olevien merkkien määrän.
 
@@ -66,6 +69,9 @@ Kiitos!
 Anna sana: b
 Kiitos!
 ```
+
+[Vastaus](osa02-02_merkkien_maara/src)
+
 ## Tyyppimuunnos
 Pythonissa voidaan usein muuntaa jokin arvo tyypistä toiseen. Esimerkiksi liukuluku voidaan muuntaa kokonaisluvuksi funktion int avulla:
 ```python
@@ -100,6 +106,9 @@ Anna luku: 1.34
 Kokonaisosa: 1
 Desimaaliosa: 0.34
 ```
+
+[Vastaus](osa02-03_tyyppimuunnos/src)
+
 ## Täysi-ikäisyys
 Tee ohjelma, joka kysyy käyttäjän ikää ja kertoo, onko tämä täysi-ikäinen (eli 18-vuotias tai vanhempi).
 
@@ -112,6 +121,9 @@ Et ole täysi-ikäinen!
 Kuinka vanha olet? 32
 Olet täysi-ikäinen!
 ```
+
+[Vastaus](osa02-04_taysi_ikaisyys/src)
+
 ## Suurempi tai yhtäsuuri
 Tee ohjelma, joka kysyy käyttäjältä kaksi kokonaislukua ja tulostaa niistä suuremman. Jos luvut ovat yhtä suuret, ohjelma huomaa myös tämän.
 
@@ -131,6 +143,9 @@ Anna ensimmäinen luku: 5
 Anna toinen luku: 5
 Luvut ovat yhtä suuret!
 ```
+
+[Vastaus](osa02-05_suurempi_tai_yhtasuuri/src)
+
 ## Vanhempi
 Tee ohjelma, joka kysyy kahden henkilön nimen ja iän ja tulostaa vanhemman henkilön nimen.
 
@@ -153,6 +168,9 @@ Nimi: Venla
 Ikä: 1
 Antti ja Venla ovat yhtä vanhoja
 ```
+
+[Vastaus](osa02-06_vanhempi/src)
+
 ## Aakkosjärjestyksessä viimeinen
 Lukujen lisäksi Python osaa vertailla myös merkkijonojen suuruusjärjestystä. Merkkijono a on pienempi kuin merkkijono b, jos merkkijono a tulee aakkosjärjestyksessä ennen jonoa b. Huomaa kuitenkin, että tämä pätee varmasti vain kun
 
@@ -178,6 +196,9 @@ Anna 1. sana: python
 Anna 2. sana: python
 Annoit saman sanan kahdesti.
 ```
+
+[Vastaus](osa02-07_aakkkosjarjestyksessa_viimeinen/src)
+
 ## Iän tarkistus
 Tee ohjelma, joka kysyy käyttäjän ikää. Jos ikä ei ole uskottava (se on alle 5 tai mahdoton luku iälle), antaa ohjelma siihen liittyvän kommentin.
 
@@ -196,6 +217,9 @@ En usko, että osaat kirjoittaa...
 Kerro ikäsi? -4
 Taitaa olla virhe
 ```
+
+[Vastaus](osa02-08_ian_tarkistus/src)
+
 ## Veljenpojat
 Tee ohjelma, joka kysyy käyttäjän nimeä. Jos nimeksi syötetään Tupu, Hupu tai Lupu, ohjelma tunnistaa käyttäjän Aku Ankan veljenpojaksi.
 
@@ -214,6 +238,9 @@ Olet luultavasti Aku Ankan veljenpoika.
 Anna nimesi: Keijo
 Et ole kenenkään tuntemani hahmon veljenpoika.
 ```
+
+[Vastaus](osa02-09_veljenpojat/src)
+
 ## Arvosana ja pisteet
 Alla oleva taulukko kuvaa erään kurssin arvosanan muodostumista. Tee ohjelma, joka ilmoittaa kurssiarvosanan annetun taulukon mukaisesti.
 
@@ -242,6 +269,9 @@ Arvosana: 3
 Anna pisteet [0-100]: -3
 Arvosana: mahdotonta!
 ```
+
+[Vastaus](osa02-10_arvosana_ja_pisteet/src)
+
 ## FizzBuzz
 Ohjelma kysyy käyttäjältä lukua. Jos luku on jaollinen kolmella, tulostetaan Fizz. Jos luku on jaollinen viidellä, tulostetaan Buzz. Jos luku on jaollinen sekä kolmella, että viidellä, tulostetaan FizzBuzz
 
@@ -261,6 +291,9 @@ Buzz
 Luku: 45
 FizzBuzz
 ```
+
+[Vastaus](osa02-11_fizzbuzz/src)
+
 ## Karkausvuosi
 Vuosi on karkausvuosi, jos se on jaollinen 4:llä. Kuitenkin jos vuosi on jaollinen 100:lla, se on karkausvuosi vain silloin, kun se on jaollinen myös 400:lla.
 
@@ -277,6 +310,9 @@ Vuosi on karkausvuosi.
 Anna vuosi: 1800
 Vuosi ei ole karkausvuosi.
 ```
+
+[Vastaus](osa02-12_karkausvuosi/src)
+
 ## Aakkosjärjestyksessä keskimmäinen
 Tee ohjelma, joka kysyy käyttäjältä kolme kirjainta. Ohjelma tulostaa kirjaimista aakkosjärjestyksessä keskimmäisen.
 
@@ -295,6 +331,9 @@ Anna 2. kirjain: B
 Anna 3. kirjain: A
 Keskimmäinen kirjain on B
 ```
+
+[Vastaus](osa02-13_aakkosjarjestyksessa_keskimmainen/src)
+
 ## Lahjaverolaskuri
 Verottajan mukaan lahja tarkoittaa sitä, että omaisuus siirtyy toiselle henkilölle ilman korvausta. Lahjasta pitää maksaa lahjaveroa, jos samalta lahjanantajalta saatujen lahjojen arvo on kolmen vuoden aikana 5 000 euroa tai enemmän.
 
@@ -323,6 +362,9 @@ Vero: 100.0 euroa
 Lahjan suuruus? 27500
 Vero: 1950.0 euroa
 ```
+
+[Vastaus](osa02-14_lahjaverolaskuri/src)
+
 ## Jatketaanko
 Kirjoita edellä olevaa toistolause-esimerkkiä mukaillen ohjelma, joka tulostaa viestin "moi" ja kysyy käyttäjältä "Jatketaanko?" kunnes käyttäjä syöttää merkkijonon "ei". Tämän jälkeen tulostetaan merkkijono "ei sitten" ja suoritus päättyy.
 
@@ -338,6 +380,9 @@ moi
 Jatketaanko? ei
 ei sitten
 ```
+
+[Vastaus](osa02-15_jatketaanko/src)
+
 ## Syötteen rajaus
 Kirjoita ohjelma, joka kysyy käyttäjältä lukuja. Mikäli luku on negatiivinen (eli pienempi kuin nolla), käyttäjälle tulostetaan viesti "Epäkelpo luku" ja käyttäjältä kysytään uutta lukua. Jos taas luku on nolla, lukujen lukeminen lopetetaan ja ohjelma poistuu toistolauseesta.
 
@@ -364,6 +409,9 @@ Syötä luku: 1
 Syötä luku: 0
 Lopetetaan...
 ```
+
+[Vastaus](osa02-16_syotteen_rajaus/src)
+
 ## Lähtölaskenta
 Tehtäväpohjassa olevan ohjelman
 ```python
@@ -388,6 +436,9 @@ Lähtölaskenta!
 Nyt!
 ```
 Korjaa ohjelmassa oleva ongelma.
+
+[Vastaus](osa02-17_lahtolaskenta/src)
+
 ## Salasana uudelleen
 Tee ohjelma, joka kysyy käyttäjältä salasanaa ja tämän jälkeen pyytää toistamaan salasanan niin kauan, kunnes käyttäjä syöttää ensimmäisenä annetun salasanan uudelleen.
 ```
@@ -399,6 +450,9 @@ Ei ollut sama!
 Toista salasana: sekred
 Käyttäjätunnus luotu!
 ```
+
+[Vastaus](osa02-18_salasana_uudelleen/src)
+
 ## PIN ja yritysten määrä
 Tee sovellus, joka kysyy käyttäjältä PIN-koodia niin kauan, kunnes käyttäjä antaa oikean PIN-koodin 4321. Ohjelma kertoo yritysten lukumäärän:
 ```
@@ -416,6 +470,9 @@ Tulostus on hieman erilainen jos PIN-koodi on oikea heti ensimmäisellä yrityks
 PIN-koodi: 4321
 Oikein, tarvitsit vain yhden yrityksen!
 ```
+
+[Vastaus](osa02-19_pin_ja_yritysten_maara/src)
+
 ## Seuraava karkausvuosi
 Tee ohjelma, joka kyselee käyttäjältä vuosilukua ja kertoo, milloin on seuraava karkausvuosi.
 ```
@@ -427,6 +484,9 @@ Jos käyttäjän syöttämä vuosi on karkausvuosi (kuten 2020), ohjelma ei kerr
 Vuosi: 2020
 Vuotta 2020 seuraava karkausvuosi on 2024
 ```
+
+[Vastaus](osa02-20_seuraava_karkausvuosi/src)
+
 ## Tarina
 ### Osa 1
 Tee ohjelma, joka pyytää käyttäjää syöttämään sanoja. Kun käyttäjä syöttää sanan loppu, ohjelma tulostaa sanoista muodostuneen tarinan ja suoritus päättyy.
@@ -451,6 +511,9 @@ Anna sana: Jussi
 Anna sana: Jussi
 Alussa oli suo kuokka ja Jussi
 ```
+
+[Vastaus](osa02-21_tarina/src)
+
 ## Lukujen käsittelyä
 Tee ohjelma, joka pyytää käyttäjää syöttämään kokonaislukuja. Ohjelma pyytää lukuja niin kauan kunnes käyttäjä syöttää nollan.
 ```
@@ -496,3 +559,6 @@ Lukujen keskiarvo 8.5
 Positiivisia 3
 Negatiivisia 1
 ```
+
+[Vastaus](osa02-22_lukujen_kasittelya/src)
+
