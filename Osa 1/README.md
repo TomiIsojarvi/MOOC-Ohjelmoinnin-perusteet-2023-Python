@@ -28,7 +28,7 @@ Tee ohjelma, joka tulostaa minuuttien määrän vuodessa. Käytä edellisen esim
 Pythonissa voidaan käyttää kaksinkertaisten lainausmerkkien " lisäksi myös yksinkertaista lainausmerkkiä '.
 
 Tämä on kätevää, kun haluat tulostaa lainausmerkkejä:
-```
+```python
 print('"Heti takaisin!", poliisi huusi.')
 ```
 ```
@@ -106,7 +106,7 @@ Tarinan tulee muuttua sen mukaan, mitkä tiedot käyttäjä antaa.
 
 ## Välilyönnillä vai ilman
 Saat seuraavan koodinpätkän työnhakijoille suunnatun sovelluksen parissa työskentelevältä tuttavaltasi:
-```
+```python
 nimi = "Teppo Testaaja"
 ika = 20
 taito1 = "python"
@@ -180,7 +180,7 @@ niin tulostus on seuraava:
 Jos print-komennolle annetaan lisäparametri end = "", komento ei tulosta rivinvaihtoa merkkijonon jälkeen.
 
 Esimerkiksi:
-```
+```python
 print("Moi ", end="")
 print("kaikki!")
 ```
@@ -188,7 +188,7 @@ print("kaikki!")
 Moi kaikki!
 ```
 Korjaa ohjelma niin, että koko lasku tuloksineen tulostetaan yhdelle riville muuttamatta kuitenkaan print-komentojen määrää:
-```
+```python
 print(5)
 print(" + ")
 print(8)
@@ -515,7 +515,7 @@ Muista sateenvarjo!
 
 ## Toisen asteen yhtälön ratkaiseminen
 Pythonin math-moduulissa on funktio sqrt, jolla voi laskea luvun neliöjuuren. Voit käyttää sitä ohjelmassa seuraavasti:
-```
+```python
 from math import sqrt
 
 print(sqrt(9))
