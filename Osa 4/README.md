@@ -423,65 +423,65 @@ vastaus 4
 
 [Vastaus](osa04-11_vaihteluvali/src)
 
-## 
+## Tulostus tähdillä
 
 
-[Vastaus](osa03-13c_osajonon_haku/src)
+[Vastaus](osa04-11a_tulostus_tahdilla/src)
 
-## 
-
-
-[Vastaus](osa03-14_osajonojen_haku/src)
-
-## 
+## Negatiivisesta positiiviseen
 
 
-[Vastaus](osa03-15_toinen_esiintyma/src)
+[Vastaus](osa04-11b_negatiivisesta_positiiviseen/src)
 
-## 
-
-
-[Vastaus](osa03-15b_kertotaulut/src)
-
-## 
+## Tähdet
 
 
-[Vastaus](osa03-16_sanojen_ensimmaiset_kirjaimet/src)
+[Vastaus](osa04-12_tahdet/src)
 
-## 
-
-
-[Vastaus](osa03-17_kertomat/src)
-
-## 
+## Anagrammi
 
 
-[Vastaus](osa03-18_parit_ympari/src)
+[Vastaus](osa04-13_anagrammi/src)
 
-## 
-
-
-[Vastaus](osa03-19_vuorotellen/src)
-
-## 
+## Palindromit
 
 
-[Vastaus](osa03-21_seitseman_veljesta/src)
+[Vastaus](osa04-14_palindromit/src)
 
-## 
-
-
-[Vastaus](osa03-22_ensimmainen_merkki/src)
-
-## 
+## Positiivisten summa
 
 
-[Vastaus](osa03-25_keskiarvo/src)
+[Vastaus](osa04-15_positiivisten_summa/src)
 
-## 
+## Parilliset
 
 
-[Vastaus](osa03-24_monta_tulostusta/src)
+[Vastaus](osa04-16_parilliset/src)
+
+## Summalista
+
+
+[Vastaus](osa04-17_summalista/src)
+
+## Uniikit
+
+
+[Vastaus](osa04-18_uniikit/src)
+
+## Listan pisimmän pituus
+
+
+[Vastaus](osa04-18a_listan_pimman_pituus/src)
+
+## Listan lyhin
+
+
+[Vastaus](osa04-18b_listan_lyhin/src)
+
+## Listan pisimmät
+
+
+[Vastaus](osa04-19_listan_pisimmat/src)
 
 ## 
 
