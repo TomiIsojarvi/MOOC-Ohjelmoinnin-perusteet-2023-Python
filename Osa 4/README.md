@@ -650,32 +650,167 @@ print(lista2)
 [Vastaus](osa04-20_lukulistasta_merkkijonolistaksi/src)
 
 ## Kaikki väärinpäin
+Kirjoita funktio kaikki_vaarinpain, joka saa parametrikseen listan merkkijonoja. Funktio luo ja palauttaa uuden listan, jossa kaikki alkuperäisellä listalla olevat merkkijonot on käännetty. Myös listan alkioiden järjestys muutetaan käänteiseksi.
 
+Esimerkki funktion käytöstä:
+```python
+lista = ["Moi", "kaikki", "esimerkki", "vielä yksi"]
+lista2 = kaikki_vaarinpain(lista)
+print(lista2)
+```
+```
+['isky äleiv', 'ikkremise', 'ikkiak', 'ioM']
+```
 
 [Vastaus](osa04-21_kaikki_vaarinpain/src)
 
 ## Eniten kirjaimia
+Kirjoita funktio eniten_kirjainta, joka saa parametrikseen merkkijonon. Funktio palauttaa kirjaimen, jota esiintyy eniten merkkijonossa. Jos yhtä yleisiä kirjaimia on monta, funktion tulee palauttaa niistä ensimmäisenä merkkijonossa esiintyvä.
 
+Esimerkki funktion käytöstä:
+```python
+mjono = "abcbdbe"
+print(eniten_kirjainta(mjono))
+
+toinen_jono = "esimerkkimerkkijonokki"
+print(eniten_kirjainta(toinen_jono))
+```
+```
+b
+k
+```
 
 [Vastaus](osa04-22_eniten_kirjaimia/src)
 
 ## Vokaalit pois
+Kirjoita funktio ilman_vokaaleja, joka saa parametrikseen merkkijonon. Funktio palauttaa uuden merkkijonon, jossa alkuperäisen merkkijonon vokaalit on poistettu.
 
+Voit olettaa, että merkkijono koostuu pelkästään pienistä suomen kielen kirjaimista a...ö.
+
+Esimerkki funktion käytöstä:
+```python
+mjono = "tämä on esimerkki"
+print(ilman_vokaaleja(mjono))
+```
+```
+tm n smrkk
+```
 
 [Vastaus](osa04-23_vokaalit_pois/src)
 
 ## Poista isot
+Pythonin merkkijonometodi isupper() palauttaa arvon True, jos merkkijono koostuu pelkästään isoista kirjaimista.
 
+Esimerkiksi:
+```python
+print("XYZ".isupper())
+
+onko_iso = "Abc".isupper()
+print(onko_iso)
+```
+```
+True
+False
+```
+
+Kirjoita metodia hyödyntäen funktio poista_isot, joka saa parametrikseen listan merkkijonoja. Funktio palauttaa uuden listan, jolla on sen parametrina olevasta listasta ne merkkijonot, jotka eivät koostu kokonaan isoista kirjaimista.
+
+Esimerkki funktion käytöstä:
+```python
+lista = ["ABC", "def", "ISO", "TOINENISO", "pieni", "toinen pieni", "Osittain Iso"]
+karsittu_lista = poista_isot(lista)
+print(karsittu_lista)
+```
+```
+['def', 'pieni', 'toinen pieni', 'Osittain Iso']
+```
 
 [Vastaus](osa04-24_poista_isot/src)
 
 ## Naapureita listassa
+Määritellään, että listan alkiot ovat naapureita, jos niiden erotus on 1. Naapureita olisivat siis esim alkiot 1 ja 2 tai alkiot 56 ja 55.
 
+Kirjoita funktio pisin_naapurijono, joka etsii listasta pisimmän peräkkäisiä naapureita sisältävän osalistan ja palauttaa sen pituuden.
+
+Esimerkiksi listassa [1, 2, 5, 4, 3, 4] pisin tällainen osalista olisi [5, 4, 3, 4], ja sen pituus 4.
+
+Esimerkki funktion kutsumisesta:
+```pytohn
+lista = [1, 2, 5, 7, 6, 5, 6, 3, 4, 1, 0]
+print(pisin_naapurijono(lista))
+```
+```
+4
+```
 
 [Vastaus](osa04-25_naapureita_listassa/src)
 
 ## Arvosanatilasto
+Tässä tehtävässä toteutetaan ohjelma kurssin arvosanatilastojen tulostamiseen.
 
+Ohjelmalle syötetään rivejä, jotka sisältävät yhden opiskelijan koepistemäärän sekä tehtyjen harjoitustehtävien määrän. Ohjelma tulostaa niiden perusteella arvosanoihin liittyviä tilastoja.
+
+Koepisteet ovat kokonaislukuja väliltä 0–20. Tehtyjen harjoitustehtävien lukumäärät taas kokonaislukuja väliltä 0–100.
+
+Ohjelma kyselee käyttäjältä rivejä niin kauan, kunnes käyttäjä syöttää tyhjän rivin. Voit olettaa, että kaikki rivit on syötetty "oikein", eli rivillä on joko kaksi kokonaislukua tai rivi on tyhjä.
+
+Koepisteiden ja harjoitustehtävien syöttäminen etenee seuraavasti:
+
+Esimerkkitulostus
+```
+Koepisteet ja harjoitusten määrä: 15 87
+Koepisteet ja harjoitusten määrä: 10 55
+Koepisteet ja harjoitusten määrä: 11 40
+Koepisteet ja harjoitusten määrä: 4 17
+Koepisteet ja harjoitusten määrä:
+Tilasto:
+```
+Kun käyttäjä on syöttänyt tyhjän rivin, tulostaa ohjelma tilastot.
+
+Tilastot muodostuvat seuraavasti:
+
+Tehtyjen harjoitustehtävien lukumäärästä saa harjoituspisteitä siten, että vähintään 10 % tehtävämäärästä tuo yhden harjoituspisteen, 20 % tuo 2 harjoituspistettä, jne., ja 100 % eli 100 harjoitustehtävää tuo 10 harjoituspistettä. Harjoitustehtävistä saatava pistemäärä on kokonaisluku.
+
+Kurssin arvosana määräytyy kokeen pistemäärän ja harjoitustehtävistä saatavien pisteiden summasta seuraavan taulukon mukaan:
+
+| koepisteet+harjoituspisteet |	arvosana        |
+|-----------------------------|-----------------|
+| 0–14	                      | 0 (eli hylätty) |
+| 15–17	                      | 1               |
+| 18–20	                      | 2               |
+| 21–23	                      | 3               |
+| 24–27	                      | 4               |
+| 28–30	                      | 5               |
+
+Edelliseen on kuitenkin poikkeus: jos kokeen pistemäärä on alle 10, on arvosana kokonaispistemäärästä riippumatta 0 eli hylätty.
+
+Yllä olevalla esimerkkisyötteellä ohjelma tulostaa seuraavat tilastot:
+
+Esimerkkitulostus
+```
+Tilasto:
+Pisteiden keskiarvo: 14.5
+Hyväksymisprosentti: 75.0
+Arvosanajakauma:
+  5:
+  4:
+  3: *
+  2:
+  1: **
+  0: *
+```
+Desimaaliluvut tulostetaan yhden desimaalin tarkkuudella.
+
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon! Eli jos ohjelmasi toiminnallisuus on esim. funktiossa main, tulee sitä kutsuva koodi kirjoittaa normaaliin tapaan, eikä ym. if-lohkoon kuten on tehtävä niissä tehtävissä, joissa edellytetään funktioiden toteuttamista.
+
+Vihje:
+
+Ohjelman syöte koostuu riveistä joilla on peräkkäin kaksi numeroa:
+```
+Koepisteet ja harjoitusten määrä: 15 87
+```
+
+Syöterivi pitää pilkkoa ensin kahtia ja muuttaa palaset kokonaisluvuksi int-funktiolla. Rivin pilkkominen onnistuu samalla tavalla kun tehtävässä Eka, toka ja vika sana. Siihen on olemassa myös hieman helpompi keino, merkkijonojen metodi split. Googlaa jos haluat, käytä esim. hakusanoja python string split.
 
 [Vastaus](osa04-26_arvosanatilasto/src)
 
