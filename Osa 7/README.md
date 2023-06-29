@@ -197,20 +197,20 @@ carbon
 
 [Vastaus](osa07-08_satunnaiset_sanat/src)
 
-## 
+## Kuinka vanha
 
 
-[Vastaus](osa03-05b_pidempi_jono/src)
+[Vastaus](osa07-09_kuinka_vanha/src)
 
-## 
-
-
-[Vastaus](osa03-05c_lopusta_alkuun/src)
-
-## 
+## Henkilötunnus oikein?
 
 
-[Vastaus](osa03-06_toinen_ja_toiseksi_viimeinen/src)
+[Vastaus](osa07-10_henkilotunnus_oikein/src)
+
+## Ruutuaika
+
+
+[Vastaus](osa07-11_ruutuaika/src)
 
 ## 
 
