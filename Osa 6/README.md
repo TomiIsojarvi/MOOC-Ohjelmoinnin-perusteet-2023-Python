@@ -610,17 +610,71 @@ Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei e
 [Vastaus](osa06-16_muistava_sanakirja/src)
 
 ## Syötteen luku
+Tee funktio lue, joka kysyy käyttäjältä syötettä, kunnes se on parametrien määrittelemällä välillä oleva kokonaisluku. Funktio palauttaa käyttäjän antaman syötteen.
 
+Funktio toimii seuraavasti:
+```python
+luku = lue("syötä luku: ", 5, 10)
+print("syötit luvun:", luku)
+```
+```
+syötä luku: seitsemän
+Syötteen on oltava kokonaisluku väliltä 5...10
+syötä luku: -3
+Syötteen on oltava kokonaisluku väliltä 5...10
+syötä luku: 8
+syötit luvun: 8
+```
 
 [Vastaus](osa06-17_syotteen_luku/src)
 
 ## Parametrien validointi
+Kirjoita funktio uusi_henkilo(nimi: str, ika: int), joka luo ja palauttaa uuden henkilö-tuplen. Tuplessa ensimmäinen alkio on nimi ja jälkimmäinen ikä.
 
+Jos funktion parametrit ovat virheelliset, sen tulee tuplen palauttamisen sijasta tuottaa ValueError-poikkeus.
+
+Virheellisiä parametreja tässä tapauksessa ovat:
+
+- nimi on tyhjä merkkijono
+- nimi ei koostu vähintään kahdesta sanasta
+- nimen pituus on yli 40 merkkiä
+- ikä on negatiivinen luku
+- ikä on suurempi kuin 150
 
 [Vastaus](osa06-18_parametrien_validointi/src)
 
 ## Virheelliset lottonumerot
+Tiedostoon lottonumerot.csv on tallennettu lottonumeroita seuraavan esimerkin mukaisesti:
+```
+viikko 1;5,7,11,13,23,24,30
+viikko 2;9,13,14,24,34,35,37
+...jne...
+```
+Aluksi pitäisi olla siis otsikko viikko x, ja sen jälkeen seitsemän numeroa väliltä 1...39.
 
+Tiedosto on kuitenkin osittain korruptoitunut. Seuraavat rivit ovat esimerkkejä virheellisistä riveistä (huomaa, että tehtäväpohjassa olevassa tiedostossa ei ole juuri näitä virheitä):
+
+Viikkonumero pielessä:
+```
+viikko zzc;1,5,13,22,24,25,26
+```
+Numero tai numeroita pielessä:
+```
+viikko 22;1,**,5,6,13,2b,34
+```
+Liian vähän numeroita:
+```
+viikko 13;4,6,17,19,24,33
+```
+Liian pieniä tai suuria numeroita:
+```
+viikko 39;5,9,15,35,39,41,105
+```
+Rivissä esiintyy sama numero kahdesti:
+```
+viikko 41;5,12,3,35,12,14,36
+```
+Kirjoita funktio suodata_virheelliset(), joka luo tiedoston korjatut_numerot.csv. Tiedostoon on kopioitu kelvolliset rivit alkuperäisestä tiedostosta.
 
 [Vastaus](osa06-19_virheelliset_lottonumerot/src)
 
