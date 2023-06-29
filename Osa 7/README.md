@@ -460,89 +460,42 @@ Huom: jotta testit toimisivat, käytä funktiota "oletusasetuksilla", eli antama
 
 [Vastaus](osa07-16_spellchecker_versio2/src)
 
-## 
+## Merkkiapuri
+Tee moduuli merkkiapuri, joka sisältää seuraavat funktiot:
 
+Funktio vaihda_koko(merkkijono: str) saa parametrikseen merkkijonon. Funktio luo ja palauttaa uuden merkkijonon, jossa alkuperäisen merkkijonon pienet kirjaimet on muutettu isoiksi kirjaimiksi ja päinvastoin.
 
-[Vastaus](osa03-08_osajonot2/src)
+Funktio puolita(merkkijono: str) palauttaa tuplessa parametrinaan saamansa merkkijonon ensimmäisen ja toisen puolikkaan. Jos merkkijonossa on pariton määrä kirjaimia, ensimmäinen puolikas on lyhyempi.
 
-## 
+Funktio poista_erikoismerkit(merkkijono: str) palauttaa merkkijonon, josta on poistettu kaikki muut merkit paitsi aakkoset [a...ö, A...Ö], numerot ja välilyönnit.
 
+Esimerkkejä moduulin toiminnasta:
+```python
+import merkkiapuri
 
-[Vastaus](osa03-13b_loytyvatko_vokaalit/src)
+mjono = "Moi kaikki!"
 
-## 
+print(merkkiapuri.vaihda_koko(mjono))
 
+p1, p2 = merkkiapuri.puolita(mjono)
 
-[Vastaus](osa03-13c_osajonon_haku/src)
+print(p1)
+print(p2)
 
-## 
-
-
-[Vastaus](osa03-14_osajonojen_haku/src)
-
-## 
-
-
-[Vastaus](osa03-15_toinen_esiintyma/src)
-
-## 
-
-
-[Vastaus](osa03-15b_kertotaulut/src)
-
-## 
-
-
-[Vastaus](osa03-16_sanojen_ensimmaiset_kirjaimet/src)
-
-## 
-
-
-[Vastaus](osa03-17_kertomat/src)
-
-## 
-
-
-[Vastaus](osa03-18_parit_ympari/src)
-
-## 
-
-
-[Vastaus](osa03-19_vuorotellen/src)
-
-## 
-
-
-[Vastaus](osa03-21_seitseman_veljesta/src)
-
-## 
-
-
-[Vastaus](osa03-22_ensimmainen_merkki/src)
-
-## 
-
-
-[Vastaus](osa03-25_keskiarvo/src)
-
-## 
-
-
-[Vastaus](osa03-24_monta_tulostusta/src)
-
-## 
-
-
-[Vastaus](osa03-23_risunelio/src)
-
-## 
-
+m2 = merkkiapuri.poista_erikoismerkit("Tämä on testi, katsotaan miten käy!!!11!")
+print(m2)
+```
+```
+mOI KAIKKI!
+Moi k
+aikki!
+Tämä on testi katsotaan miten käy11
 ```
 
-[Vastaus](osa03-26_shakkilauta/src)
+[Vastaus](osa07-17_merkkiapuri/src)
 
-## 
+## Oma ohjelmointikieli
 
 
-[Vastaus](osa03-27_sananelio/src)
+[Vastaus](osa07-18_oma_ohjelmointikieli/src)
 
