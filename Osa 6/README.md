@@ -609,93 +609,19 @@ Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei e
 
 [Vastaus](osa06-16_muistava_sanakirja/src)
 
-## 
+## Syötteen luku
 
 
-[Vastaus](osa03-07_osajonot1/src)
+[Vastaus](osa06-17_syotteen_luku/src)
 
-## 
-
-
-[Vastaus](osa03-08_osajonot2/src)
-
-## 
+## Parametrien validointi
 
 
-[Vastaus](osa03-13b_loytyvatko_vokaalit/src)
+[Vastaus](osa06-18_parametrien_validointi/src)
 
-## 
-
-
-[Vastaus](osa03-13c_osajonon_haku/src)
-
-## 
+## Virheelliset lottonumerot
 
 
-[Vastaus](osa03-14_osajonojen_haku/src)
+[Vastaus](osa06-19_virheelliset_lottonumerot/src)
 
-## 
-
-
-[Vastaus](osa03-15_toinen_esiintyma/src)
-
-## 
-
-
-[Vastaus](osa03-15b_kertotaulut/src)
-
-## 
-
-
-[Vastaus](osa03-16_sanojen_ensimmaiset_kirjaimet/src)
-
-## 
-
-
-[Vastaus](osa03-17_kertomat/src)
-
-## 
-
-
-[Vastaus](osa03-18_parit_ympari/src)
-
-## 
-
-
-[Vastaus](osa03-19_vuorotellen/src)
-
-## 
-
-
-[Vastaus](osa03-21_seitseman_veljesta/src)
-
-## 
-
-
-[Vastaus](osa03-22_ensimmainen_merkki/src)
-
-## 
-
-
-[Vastaus](osa03-25_keskiarvo/src)
-
-## 
-
-
-[Vastaus](osa03-24_monta_tulostusta/src)
-
-## 
-
-
-[Vastaus](osa03-23_risunelio/src)
-
-## 
-
-
-[Vastaus](osa03-26_shakkilauta/src)
-
-## 
-
-
-[Vastaus](osa03-27_sananelio/src)
 
