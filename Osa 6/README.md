@@ -372,37 +372,240 @@ Laivasillankatu Hietalahdentori 1.478708873076181
 [Vastaus](osa06-09_kaupunkipyorat/src)
 
 ## Omistuskirjoitus
-
+Tee ohjelma, joka kysyy nimeä ja luo "omistuskirjoituksen" käyttäjän haluamaan tiedostoon. Seuraavassa ohjelman esimerkkisuoritus:
+```
+Kenelle teos omistetaan: Arto
+Mihin kirjoitetaan: omistettu.txt
+```
+Tiedoston omistettu.txt sisällöksi tulee
+```
+Hei Arto, toivomme viihtyisiä hetkiä python-kurssimateriaalin parissa! Terveisin mooc.fi-tiimi
+```
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
 [Vastaus](osa06-10_omistuskirjoitus/src)
 
 ## Päiväkirja
+Tee ohjelma, joka mallintaa yksinkertaista päiväkirjaa. Ohjelman tulee tallentaa päiväkirjamerkinnät tiedostoon paivakirja.txt. Kun ohjelma käynnistetään, se lukee merkinnät tiedostosta.
 
+Huom! Paikalliset testit voivat muuttaa tiedoston sisältöä - kopioi siis tiedosto talteen ennen testien ajamista, jos haluat säilyttää sen sisällön.
+
+Ohjelman tulee toimia seuraavan esimerkin mukaisesti:
+```
+1 - lisää merkintä, 2 - lue merkinnät, 0 - lopeta
+Valinta: 1
+Anna merkintä: Tänään söin puuroa
+Päiväkirja tallennettu
+
+1 - lisää merkintä, 2 - lue merkinnät, 0 - lopeta
+Valinta: 2
+Merkinnät:
+Tänään söin puuroa
+1 - lisää merkintä, 2 - lue merkinnät, 0 - lopeta
+Valinta: 1
+Anna merkintä: Illalla kävin saunassa
+Päiväkirja tallennettu
+
+1 - lisää merkintä, 2 - lue merkinnät, 0 - lopeta
+Valinta: 2
+Merkinnät:
+Tänään söin puuroa
+Illalla kävin saunassa
+1 - lisää merkintä, 2 - lue merkinnät, 0 - lopeta
+Valinta: 0
+Heippa!
+```
+Uusi käynnistys:
+```
+Esimerkkitulostus
+1 - lisää merkintä, 2 - lue merkinnät, 0 - lopeta
+Valinta: 2
+Merkinnät:
+Tänään söin puuroa
+Illalla kävin saunassa
+1 - lisää merkintä, 2 - lue merkinnät, 0 - lopeta
+Valinta: 0
+Heippa!
+```
+
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
 [Vastaus](osa06-11_paivakirja/src)
 
 ## Aineiston suodatus
+Tiedostossa laskut.csv on tehtävien ratkaisuja seuraavan esimerkin mukaisesti:
+```
+Arto;2+5;7
+Pekka;3-2;1
+Erkki;9+3;11
+Arto;8-3;4
+Pekka;5+5;10
+...jne...
+```
+Jokaisella rivin muoto on siis oppilaan_nimi;lasku;lopputulos. Laskut ovat kaikki esimerkin mukaisesti joko yhteen- tai vähennyslaskuja, ja kaikissa on kaksi operandia.
 
+Kirjoita funktio suodata_laskut(), joka
+
+- Lukee tiedoston laskut.csv sisällön ja
+- kirjoittaa tiedostoon oikeat.csv ne rivit, joilla laskutoimituksen lopputulos on oikein sekä
+- kirjoittaa tiedostoon vaarat.csv ne rivit, joilla laskutoimituksen lopputulos on väärin.
+
+Edellisestä esimerkistä tiedostoon oikeat.csv olisi siis kirjoitettu rivit
+```
+Arto;2+5;7
+Pekka;3-2;1
+Pekka;5+5;10
+```
+Kaksi muuta riviä olisi kirjoitettu tiedostoon vaarat.csv.
+
+Kirjoita rivit samassa järjestyksessä kuin ne esiintyvät alkuperäisessä tiedostossa. Älä muuta alkuperäistä tiedostoa.
+
+Huomaa että funktion tulee toimia oikein siinäkin tapauksessa että funktiota kutsutaan monta kertaa perkkäin. Eli riippumatta siitä suoritatko funktion vain kerran
+```python
+suodata_laskut()
+```
+tai useita kertoja peräkkän
+```python
+suodata_laskut()
+suodata_laskut()
+suodata_laskut()
+suodata_laskut()
+```
+tiedostojen sisältöjen tulee lopulta olla samat.
 
 [Vastaus](osa06-12_aineiston_suodatus/src)
 
 ## Henkilöt talteen
+Kirjoita funktio tallenna_henkilo(henkilo: tuple) joka saa parametrikseen henkilöä kuvaavan tuplen. Tuplessa on seuraavat tiedot tässä järjestyksessä:
 
+- Nimi (merkkijono)
+- Ikä (kokonaisluku)
+- Pituus (liukuluku)
+
+Tallenna henkilön tiedot tiedostoon henkilot.csv olemassa olevien tietojen perään. Tiedot tulee tallentaa muodosssa
+
+nimi;ikä;pituus
+
+eli yhden henkilön tiedot tulevat yhdelle riville. Jos funktiota esim. kutsuttaisiin parametrien arvoilla ("Kimmo Kimmonen", 37, 175.5), ohjelma kirjoittaisi tiedoston loppuun rivin
+```
+Kimmo Kimmonen;37;175.5
+```
 
 [Vastaus](osa06-13_henkilot_talteen/src)
 
 ## Kurssin tulokset, osa 4
+Laajennetaan vielä hieman aiemmin kurssien tulokset generoivaa sovellusta.
 
+Tällä hetkellä tiedostosta luetaan opiskelijoiden nimet, tehtäväpisteet sekä koepisteet. Laajennetaan ohjelmaa siten, että myös kurssin nimi ja laajuus luetaan tiedostosta, jonka muoto on seuraava (tiedosto on kirjoitettu ilman ääkkösiä, jotta se ei aiheuttaisi ongelmia Windowsissa):
+
+Esimerkkidata
+
+nimi: Ohjelmoinnin perusteet
+laajuus opintopisteina: 5
+Ohjelma luo kaksi tiedostoa. Tiedoston tulos.txt muoto on seuraava:
+```
+Esimerkkidata
+Ohjelmoinnin perusteet, 5 opintopistettä
+========================================
+nimi                          teht_lkm  teht_pist koe_pist  yht_pist  arvosana
+pekka peloton                 21        5         9         14        0
+jaana javanainen              27        6         11        17        1
+liisa virtanen                35        8         14        22        3
+```
+
+Tulokset kertova osa on siis samanlainen kuin tehtävän edellisen osan tulostus.
+
+Tämän lisäksi luodaan tiedosto tulos.csv, jonka muoto on seuraava:
+```
+12345678;pekka peloton;0
+12345687;jaana javanainen;1
+12345699;liisa virtanen;3
+```
+Ohjelman suoritus näyttää seuraavalta:
+```
+opiskelijatiedot: opiskelijat1.csv
+tehtävätiedot: tehtavat1.csv
+koepisteet: koepisteet1.csv
+kurssin tiedot: kurssi1.txt
+Tulokset talletettu tiedostoihin tulos.txt ja tulos.csv
+```
+
+Ohjelma siis ainoastaan kyselee tiedostojen nimet ja varsinaiset tulokset tallennetaan vain tiedostoihin.
+
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
 [Vastaus](osa06-14_kurssin_tulokset_osa4/src)
 
 ## Sanahaku
+Tehtäväpohjasta löytyy tiedosto sanat.txt, joka sisältää englanninkielisiä sanoja.
 
+Tehtäväsi on kirjoittaa funktio hae_sanat(hakusana: str), joka palauttaa listana annetun hakusanan mukaiset sanat tiedostosta.
+
+Hakusanassa voi käyttää pienten kirjainten lisäksi seuraavia erikoismerkkejä:
+
+- Piste . tarkoittaa, että mikä tahansa merkki käy (esim ca. vastaa vaikkapa sanoja cat ja car, p.ng sanoja ping ja pong ja .a.e sanoja sane, care tai late.
+- Asteriski * tarkoittaa, että sanan alku- tai loppuosaksi käy mikä tahansa jono, esim. ca* vastaa vaikkapa sanoja california, cat, caring tai catapult. Vastaavasti hakusana *ane vastaa vaikkapa sanoja crane, insane tai aeroplane. Voit olettaa, että asteriski on aina joko hakusanan alussa tai lopussa, ja että hakusanassa esiintyy korkeintaan yksi asteriski.
+- Jos hakusanassa ei ole erikoismerkkejä, haetaan vain täsmälleen hakusanaa vastaava sana.
+
+Sovitaan, että samassa hakusanassa ei voi käyttää molempia erikoismerkkejä.
+
+Sanat ovat tiedostossa kokonaan pienillä kirjaimilla kirjoitettuna. Voit myös olettaa, että funktion parametri on annettu kokonaan pienillä kirjaimilla.
+
+Jos yhtään tulosta ei löydy, funktio palauttaa tyhjän listan.
+
+Vinkki: Pythonin merkkijonometodeista startswith() ja endswith() saattaa olla hyötyä tehtävässä, googlaa niiden toiminta tarvittaessa tarkemmin!
+
+Esimerkki funktion kutsumisesta:
+```python
+print(hae_sanat("*vokes"))
+```
 
 [Vastaus](osa06-15_sanahaku/src)
 
 ## Muistava sanakirja
+Tee sanakirjaa mallintava ohjelma, johon voi syöttää uusia sanoja tai josta voi hakea syötettyjä sanoja.
 
+Ohjelman tulee toimia näin:
+```
+1 - Lisää sana, 2 - Hae sanaa, 3 - Poistu
+Valinta: 1
+Anna sana suomeksi: auto
+Anna sana englanniksi: car
+Sanapari lisätty
+1 - Lisää sana, 2 - Hae sanaa, 3 - Poistu
+Valinta: 1
+Anna sana suomeksi: roska
+Anna sana englanniksi: garbage
+Sanapari lisätty
+1 - Lisää sana, 2 - Hae sanaa, 3 - Poistu
+Valinta: 1
+Anna sana suomeksi: laukku
+Anna sana englanniksi: bag
+Sanapari lisätty
+1 - Lisää sana, 2 - Hae sanaa, 3 - Poistu
+Valinta: 2
+Anna sana: bag
+roska - garbage
+laukku - bag
+1 - Lisää sana, 2 - Hae sanaa, 3 - Poistu
+Valinta: 2
+Anna sana: car
+auto - car
+1 - Lisää sana, 2 - Hae sanaa, 3 - Poistu
+Valinta: 2
+Anna sana: laukku
+laukku - bag
+1 - Lisää sana, 2 - Hae sanaa, 3 - Poistu
+Valinta: 3
+Moi!
+```
+Sanat tallennetaan tiedostoon sanakirja.txt. Ohjelma lukee tiedoston sisällön kun se käynnistetään. Uudet sanaparit lisätään tiedostoon aina tallennuksen yhteydessä.
+
+Voit itse päättää tiedostoon tallennettavan tiedon muodon.
+
+Huomaa, että paikallisten TMC-testien ajaminen voi tyhjentää sanakirja-tiedoston.
+
+Huom: tässä tehtävässä (eikä missään muussakaan tehtävissä missä ei erikseen pyydetä funktioiden toteuttamista) mitään koodia ei tule sijoittaa if __name__ == "__main__"-lohkoon!
 
 [Vastaus](osa06-16_muistava_sanakirja/src)
 
