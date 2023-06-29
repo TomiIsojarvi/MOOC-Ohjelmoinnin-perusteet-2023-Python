@@ -1,5 +1,5 @@
 # Osa 7 - Tehtävien vastaukset
-## Tulosta luvut
+## 
 
 
 [Vastaus](osa03-00_tulosta_luvut/src)
