@@ -60,27 +60,140 @@ print(jaa_palasiksi(5))
 [Vastaus](osa07-03_murtoluvuilla_laskeminen/src)
 
 ## Lottonumerot
+Tee funktio lottonumerot(maara: int, alaraja: int, ylaraja: int), joka arpoo annetun määrän satunnaislukuja väliltä alaraja...ylaraja, tallentaa ne listaan ja palauttaa listan. Lukujen tulee olla palautetussa listassa suuruusjärjestyksessä.
 
+Koska kyseessä ovat lottonumerot, sama numero ei saa esiintyä listassa kahta kertaa.
+
+Esimerkki:
+```python
+for numero in lottonumerot(7, 1, 40):
+    print(numero)
+```
+```
+4
+7
+11
+16
+22
+29
+38
+```
 
 [Vastaus](osa07-04_lottonumerot/src)
 
 ## Salasanan arpoja, osa 1
+Tee funktio, jonka avulla on mahdollista luoda halutun pituisia satunnaisista pienistä kirjaimista (väliltä a-z) muodostettuja salasanoja.
 
+Esimerkki:
+```python
+for i in range(10):
+    print(luo_salasana(8))
+```
+```
+lttehepy
+olsxttjl
+cbjncrzo
+dwxqjdgu
+gpfdcecs
+jabyvgar
+xnbbonbl
+ktmsjyww
+ejhprmel
+rjkoacib
+```
 
 [Vastaus](osa07-05_salasanan_arpoja_1/src)
 
 ## Salasanan arpoja, osa 2
+Tee paranneltu versio edellisen tehtävän funktiosta. Funktio saa nyt kolme parametria:
 
+- jos toinen parametri on True, salasanassa on myös (yksi tai useampi) numero
+- jos kolmas parametri on True, salasanassa on myös (yksi tai useampi) erikoismerkki joukosta !?=+-()#
+
+Salasanassa täytyy olla parametreista riippumatta aina vähintään yksi kirjain. Voit olettaa, että funktiota kutsutaan aina parametreilla, joilla on mahdollista tuottaa halutunlaisia salasanoja.
+
+Esimerkki:
+```python
+for i in range(10):
+    print(luo_hyva_salasana(8, True, True))
+```
+```
+2?0n+u31
+u=m4nl94
+n#=i6r#(
+da9?zvm?
+7h)!)g?!
+a=59x2n5
+(jr6n3b5
+9n(4i+2!
+32+qba#=
+n?b0a7ey
+```
 
 [Vastaus](osa07-06_salasanan_arpoja_2/src)
 
 ## Noppasimulaatio
+Tehdään tässä tehtävässä muutamia funktioita, joita on mahdollista käyttää nopanheittoon liittyvissä peleissä.
 
+Normaalin nopan sijaan tehtävässä käytetään ns. epätransitiivisia noppia, joista on lisää tietoa esim. tässä artikkelissa tai tässä videossa.
+
+Käytössä on kolme noppaa:
+
+- Nopassa A on numerot 3, 3, 3, 3, 3, 6
+- Nopassa B on numerot 2, 2, 2, 5, 5, 5
+- Nopassa C on numerot 1, 4, 4, 4, 4, 4
+
+Tee funktio heita(noppa: str), joka heittää parametrinsa kertomaa noppaa. Esimerkki:
+```python
+for i in range(20):
+    print(heita("A"), " ", end="")
+print()
+for i in range(20):
+    print(heita("B"), " ", end="")
+print()
+for i in range(20):
+    print(heita("C"), " ", end="")
+```
+```
+3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  3  6  3  6  3
+2  2  5  2  2  5  5  2  2  5  2  5  5  5  2  5  2  2  2  2
+4  4  4  4  4  1  1  4  4  4  1  4  4  4  4  4  4  4  4  4
+```
+
+Tee vielä funktio pelaa(noppa1: str, noppa2: str, kertaa: int) joka heittää kokonaisluvun kertoman määrän parametreina olevia noppia. Funktio palauttaa tuplen, joka kertoo nopan 1 voittojen lukumäärän, nopan 2 voittojen lukumäärän ja tasapelien lukumäärän.
+```python
+tulos = pelaa("A", "C", 1000)
+print(tulos)
+tulos = pelaa("B", "B", 1000)
+print(tulos)
+```
+```
+(292, 708, 0)
+(249, 273, 478)
+```
 
 [Vastaus](osa07-07_noppasimulaatio/src)
 
 ## Satunnaiset sanat
+Tehtäväpohjassa on annettu tiedosto sanat.txt, joka sisältää englannin kielen sanoja, yksi sana joka rivillä.
 
+Kirjoita funktio sanat(n: int, alku: str), joka palauttaa listassa n kappaletta satunnaisia sanoja tiedostosta. Kaikkien palautettujen sanojen tulee alkaa annetulla merkkijonolla.
+
+Jos funktiota esim. kutsuttaisiin parametreilla sanat(3, "ca"), se voisi palauttaa listassa esim. sanat "cat", "car" ja "carbon". Sama sana ei saa esiintyä listassa kahdesti.
+
+Jos annetulla merkkijonolla alkavia sanoja ei löydy tarpeeksi annetun kokoisen ryhmän muodostamiseen, funktio tuottaa poikkeuksen ValueError.
+
+Esimerkki:
+```python
+lista = sanat(3, "ca")
+for sana in lista:
+    print(sana)
+```
+```
+cat
+car
+carbon
+```
 
 [Vastaus](osa07-08_satunnaiset_sanat/src)
 
