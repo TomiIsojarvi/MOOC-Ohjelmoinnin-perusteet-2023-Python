@@ -271,27 +271,192 @@ Keskim. minuutteja: 156.0
 [Vastaus](osa07-11_ruutuaika/src)
 
 ## JSON-tiedoston käsittely
+Tarkastellaan JSON-tiedostoa, jossa on tietoa opiskelijoista seuraavassa muodossa:
+```
+[
+    {
+        "nimi": "Pekka Pythonisti",
+        "ika": 27,
+        "harrastukset": [
+            "koodaus",
+            "kutominen"
+        ]
+    },
+    {
+        "nimi": "Jaana Javanainen",
+        "ika": 24,
+        "harrastukset": [
+            "koodaus",
+            "kalliokiipeily",
+            "lukeminen"
+        ]
+    }
+]
+```
+Toteuta funktio tulosta_henkilot(tiedosto: str), joka lukee esimerkin tavalla muodostetun JSON-tiedoston (jonka sisältönä voi olla mielivaltainen määrä henkilöitä) ja tulostaa ne seuraavassa muodossa:
+```
+Pekka Pythonisti 27 vuotta (koodaus, kutominen)
+Jaana Javanainen 24 vuotta (koodaus, kalliokiipeily, lukeminen)
+```
 
+Harrastukset tulee luetella samassa järjestyksessä kuin ne on annettu JSON-tiedostossa.
 
 [Vastaus](osa07-12_jsontiedostot/src)
 
 ## Kurssien tilastot
+### Osa 1: tieto kursseista
+Osoitteesta https://studies.cs.helsinki.fi/stats-mock/api/courses löytyy JSON-muodossa muutaman laitoksen verkkokurssin perustiedot.
+
+Tee funktio hae_kaikki() joka hakee ja palauttaa kaikkien menossa olevien kurssien (kentän enabled arvona True) tiedot listana tupleja. Paluuarvon muoto on seuraava:
+```
+[
+    ('Full Stack Open 2020', 'ofs2019', 2020, 201),
+    ('DevOps with Docker 2019', 'docker2019', 2019, 36),
+    ('DevOps with Docker 2020', 'docker2020', 2020, 36),
+    ('Beta DevOps with Kubernetes', 'beta-dwk-20', 2020, 28)
+]
+```
+Jokainen tuple siis sisältää seuraavat arvot:
+
+- kurssin koko nimi (fullName)
+- nimi (name)
+- vuosi (year)
+- harjoitusten (exercises) yhteenlaskettu määrä
+
+Huom: Tämän tehtävän testien toimivuuden osalta on oleellista, että haet tiedot funktiolla urllib.request.urlopen.
+
+Huom2: Testeissä käytetään myös ovelaa kikkaa, joka hieman muuttaa internetistä tulevaa dataa ja tämän avulla varmistaa, että et huijaa tehtävässäsi palauttamalla "kovakoodattua" dataa.
+
+Huom3: Jotkut Mac-käyttäjät ovat törmänneet tehtävässä seuraavaan ongelmaan:
+```
+File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/urllib/request.py", line 1353, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1124)>
+```
+Ongelman ratkaisutapa riippuu siitä miten python on asennettu koneellesi. Joissain tapauksissa toimii seuraava:
+```
+cd "/Applications/Python 3.8/"
+sudo "./Install Certificates.command
+```
+Huomaa, että cd-komennon polku riippuu käyttämästäsi Pythonin versiosta. Se voi olla myös "/Applications/Python 3.8/".
+
+Täällä on ehdotettu useita erilaisia ratkaisuja ongelmaan.
+
+Eräs kikka jota voit kokeilla, on seuraava:
+```python
+import urllib.request
+import json
+import ssl # lisää tämä kirjasto importeihin
+
+def hae_kaikki():
+    # ja tämä rivi funktioiden alkuun
+    context = ssl._create_unverified_context()
+    # muu koodi
+```
+Toinen tapa kiertää ongelma on seuraava:
+```python
+import urllib.request
+import certifi # lisää tämä kirjasto importeihin
+import json
+
+def hae_kaikki():
+   osoite = "https://studies.cs.helsinki.fi/stats-mock/api/courses"
+   # lisätään kutsuun toinen parametri
+   pyynto = urllib.request.urlopen(osoite, cafile=certifi.where())
+   # muu koodi
+```
+### Osa 2: yhden kurssin tiedot
+Kunkin kurssin JSON-muotoinen tehtävästatistiikka löytyy omasta osoitteesta, joka saadaan vaihtamalla kurssin kenttä name seuraavassa tähtien paikalle https://studies.cs.helsinki.fi/stats-mock/api/courses/****/stats
+
+Esimerkiksi kurssin docker2019 tiedot ovat osoitteessa https://studies.cs.helsinki.fi/stats-mock/api/courses/docker2019/stats
+
+Tee ohjelmaasi funktio hae_kurssi(kurssi: str), joka palauttaa kurssin tarkemman tehtävästatistiikan.
+
+Kun kutsutaan hae_kurssi("docker2019"), funktio palauttaa sanakirjan, jonka sisältö on seuraava:
+```
+{
+    'viikkoja': 4,
+    'opiskelijoita': 220,
+    'tunteja': 5966,
+    'tunteja_keskimaarin': 27,
+    'tehtavia': 4988,
+    'tehtavia_keskimaarin': 22
+}
+```
+Sanakirjaan tallennetut arvot määrittyvät seuraavasti:
+
+- viikkoja: kurssia vastaavan JSON-olioiden määrä
+- opiskelijoita viikkojen opiskelijamäärien maksimi
+- tunteja: kakkien viikkojen tuntimäärien (hour_total) summa
+ - tunteja_keskimaarin: edellinen jaettuna opiskelijamäärällä (kokonaislukuna pyöristettynä alaspäin)
+- tehtavia: kakkien viikkojen tehtävämäärien (exercise_total) summa
+- tehtavia_keskimaarin: edellinen jaettuna opiskelijamäärällä (kokonaislukuna pyöristettynä alaspäin)
+
+Huom: Samat huomiot pätevät tähän osaan kuin edelliseen!
+
+Huom2: löydät math -moduulista funktion, jonka avulla kokonaisluvun alaspäin pyöristäminen on helppoa
 
 
 [Vastaus](osa07-13_kurssistatistiikka/src)
 
 ## Kuka huijasi
+Tiedostossa tentin_aloitus.csv on tenttien aloitusaikoja muodossa tunnus;hh:mm. Esimerkiksi:
+```
+jarmo;09:00
+timo;18:42
+kalle;13:23
+```
+Lisäksi tiedostossa palautus.csv on tehtävien palautusaikoja muodossa tunnus;tehtävä;pisteet;hh:mm. Esimerkiksi:
+```
+jarmo;1;8;16:05
+timo;2;10;21:22
+jarmo;2;10;19:15
+jne...
+```
+Tehtäväsi on etsiä ne opiskelijat, jotka ovat käyttäneet tenttiin yli 3 tuntia aikaa, eli opiskelijat, joiden jonkin tehtävän palautus on tehty yli 3 tuntia tentin aloitusajasta. Palautuksia voi siis olla useampi. Voit olettaa, että kaikki ajat ovat saman vuorokauden puolella.
 
+Kirjoita funktio huijarit(), joka palauttaa listan huijanneiden opiskelijoiden käyttäjätunnuksista.
 
 [Vastaus](osa07-14_kuka_huijasi/src)
 
 ## Kuka huijasi, versio 2
+Käytössäsi on edellisessä tehtävässä määritellyt datatiedostot. Kirjoita funktio viralliset_pisteet(), joka palauttaa sanakirjassa (dict) opiskelijoiden koepisteet seuraavien sääntöjen mukaan:
 
+- Jos samaan tehtävänumeroon on tehty useita palautuksia, korkeimman pistemäärän palautus otetaan huomioon
+- Jos tehtäväpalautus on tehty yli 3 tuntia tentin aloittamisen jälkeen, palautusta ei huomioida ollenkaan
+
+Tehtävät on numeroitu 1–8 ja jokaisesta tehtävästä voi saada 0–6 pistettä.
+
+Palautetussa sanakirjassa tunnus on avain ja tehtävien yhteispistemäärä arvo.
+
+Vinkki: sisäkkäiset sanakirjat (dict) ovat mainio työkalua tallennettaessa eri opiskelijoiden pisteitä ja aikoja.
 
 [Vastaus](osa07-15_kuka_huijasi_2/src)
 
 ## Spellchecker, versio 2
+Teemme tässä tehtävässä hieman parannellun version edellisen osan tehtävästä Spellchecker.
 
+Edellisen osan version tapaan ohjelma pyytää käyttäjää kirjoittamaan rivin englanninkielistä tekstiä. Ohjelma suorittaa tekstille oikeinkirjoitustarkistuksen ja tulostaa saman tekstin siten, että kaikki väärin kirjoitetut sanat on ympäröity tähdillä. Tämän lisäksi ohjelma antaa listan korjausehdotuksia väärin kirjotettuihin sanoihin.
+
+Seuraavassa kaksi käyttöesimerkkiä:
+```
+write text: We use ptython to make a spell checker
+
+We use *ptython* to make a spell checker
+korjausehdotukset:
+ptython: python, pythons, typhon
+```
+```
+write text: this is acually a good and usefull program
+
+this is *acually* a good and *usefull* program
+korjausehdotukset:
+acually: actually, tactually, factually
+usefull: usefully, useful, museful
+```
+Korjausehdotukset etsitään standardikirjaston moduulin difflib tarjoaman funktion get_close_matches avulla.
+
+Huom: jotta testit toimisivat, käytä funktiota "oletusasetuksilla", eli antamalla sille kaksi parametria: virheellinen sana ja lista oikeista sanoista.
 
 [Vastaus](osa07-16_spellchecker_versio2/src)
 
