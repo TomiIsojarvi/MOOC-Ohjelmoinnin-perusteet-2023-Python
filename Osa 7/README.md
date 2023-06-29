@@ -495,7 +495,123 @@ Tämä on testi katsotaan miten käy11
 [Vastaus](osa07-17_merkkiapuri/src)
 
 ## Oma ohjelmointikieli
+Tässä tehtävässä toteutetaan oman ohjelmointikielen suorittaja. Voit käyttää tehtävässä kaikkia kurssilla oppimiasi taitoja.
 
+Ohjelma muodostuu riveistä, joista jokainen on yksi seuraavista:
+
+- PRINT [arvo]: tulostaa annetun arvon
+- MOV [muuttuja] [arvo]: asettaa muuttujaan annetun arvon
+- ADD [muuttuja] [arvo]: lisää muuttujaan annetun arvon
+- SUB [muuttuja] [arvo}: vähentää muuttujasta annetun arvon
+- MUL [muuttuja] [arvo]: kertoo muuttujan annetulla arvolla
+-  [kohta]:: määrittelee kohdan, johon voidaan hypätä muualta
+J- UMP [kohta]: hyppää annettuun kohtaan
+- IF [ehto] JUMP [kohta]: jos ehto pätee, hyppää annettuun kohtaan
+-  END: lopettaa ohjelman
+
+Ohjelmaa suoritetaan rivi kerrallaan ensimmäisestä rivistä aloittaen. Ohjelma päättyy, kun vastaan tulee komento END tai suoritus menee ohjelman viimeisen rivin yli.
+
+Jokaisessa ohjelmassa on 26 muuttujaa, joiden nimet ovat A...Z. Jokaisen muuttujan arvo on 0 ohjelman alussa. Merkintä [muuttuja] viittaa tällaiseen muuttujaan.
+
+Kaikki ohjelman käsittelemät arvot ovat kokonaislukuja. Merkintä [arvo] viittaa joko muuttujaan tai kokonaislukuna annettuun arvoon.
+
+Merkintä [kohta] on mikä tahansa kohdan nimi, joka muodostuu pienistä kirjaimista a...z sekä numeroista 0...9. Kahdella kohdalla ei saa olla samaa nimeä.
+
+Merkintä [ehto] tarkoittaa ehtoa muotoa [arvo] [vertailu] [arvo]. Tässä [vertailu] on aina yksi seuraavista: ==, !=, <, <=, > tai >=.
+
+Tee funktio suorita(ohjelma), jolle annetaan ohjelma listana. Jokainen listan alkio on yksi ohjelman rivi. Funktion tulee palauttaa listana kaikki PRINT-komentojen tulokset ohjelman suorituksen aikana.
+
+Voit olettaa, että funktiolle annettu ohjelma on oikeanmuotoinen, eli funktion ei tarvitse toteuttaa virheenkäsittelyä.
+
+Tehtävästä on saatavilla kaksi pistettä: saat yhden pisteen, jos komennot PRINT, MOV, ADD, SUB, MUL ja END toimivat, ja vielä toisen pisteen, jos myös loput silmukoihin liittyvät komennot toimivat.
+
+Esimerkki 1:
+```python
+ohjelma1 = []
+ohjelma1.append("MOV A 1")
+ohjelma1.append("MOV B 2")
+ohjelma1.append("PRINT A")
+ohjelma1.append("PRINT B")
+ohjelma1.append("ADD A B")
+ohjelma1.append("PRINT A")
+ohjelma1.append("END")
+tulos = suorita(ohjelma1)
+print(tulos)
+```
+```
+[1, 2, 3]
+```
+Esimerkki 2:
+```python
+ohjelma2 = []
+ohjelma2.append("MOV A 1")
+ohjelma2.append("MOV B 10")
+ohjelma2.append("alku:")
+ohjelma2.append("IF A >= B JUMP loppu")
+ohjelma2.append("PRINT A")
+ohjelma2.append("PRINT B")
+ohjelma2.append("ADD A 1")
+ohjelma2.append("SUB B 1")
+ohjelma2.append("JUMP alku")
+ohjelma2.append("loppu:")
+ohjelma2.append("END")
+tulos = suorita(ohjelma2)
+print(tulos)
+```
+```
+[1, 10, 2, 9, 3, 8, 4, 7, 5, 6]
+```
+Esimerkki 3 (kertoma):
+```python
+ohjelma3 = []
+ohjelma3.append("MOV A 1")
+ohjelma3.append("MOV B 1")
+ohjelma3.append("alku:")
+ohjelma3.append("PRINT A")
+ohjelma3.append("ADD B 1")
+ohjelma3.append("MUL A B")
+ohjelma3.append("IF B <= 10 JUMP alku")
+ohjelma3.append("END")
+tulos = suorita(ohjelma3)
+print(tulos)
+```
+```
+[1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800]
+```
+Esimerkki 4 (alkuluvut):
+```python
+ohjelma4 = []
+ohjelma4.append("MOV N 50")
+ohjelma4.append("PRINT 2")
+ohjelma4.append("MOV A 3")
+ohjelma4.append("alku:")
+ohjelma4.append("MOV B 2")
+ohjelma4.append("MOV Z 0")
+ohjelma4.append("testi:")
+ohjelma4.append("MOV C B")
+ohjelma4.append("uusi:")
+ohjelma4.append("IF C == A JUMP virhe")
+ohjelma4.append("IF C > A JUMP ohi")
+ohjelma4.append("ADD C B")
+ohjelma4.append("JUMP uusi")
+ohjelma4.append("virhe:")
+ohjelma4.append("MOV Z 1")
+ohjelma4.append("JUMP ohi2")
+ohjelma4.append("ohi:")
+ohjelma4.append("ADD B 1")
+ohjelma4.append("IF B < A JUMP testi")
+ohjelma4.append("ohi2:")
+ohjelma4.append("IF Z == 1 JUMP ohi3")
+ohjelma4.append("PRINT A")
+ohjelma4.append("ohi3:")
+ohjelma4.append("ADD A 1")
+ohjelma4.append("IF A <= N JUMP alku")
+tulos = suorita(ohjelma4)
+print(tulos)
+```
+```
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+```
 
 [Vastaus](osa07-18_oma_ohjelmointikieli/src)
 
