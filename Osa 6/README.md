@@ -371,40 +371,40 @@ Laivasillankatu Hietalahdentori 1.478708873076181
 
 [Vastaus](osa06-09_kaupunkipyorat/src)
 
-## 
+## Omistuskirjoitus
 
 
-[Vastaus](osa03-05c_lopusta_alkuun/src)
+[Vastaus](osa06-10_omistuskirjoitus/src)
 
-## 
-
-
-[Vastaus](osa03-06_toinen_ja_toiseksi_viimeinen/src)
-
-## 
+## Päiväkirja
 
 
-[Vastaus](osa03-09_risuaitaviiva/src)
+[Vastaus](osa06-11_paivakirja/src)
 
-## 
-
-
-[Vastaus](osa03-10_risuaitanelio/src)
-
-## 
+## Aineiston suodatus
 
 
-[Vastaus](osa03-11_alleviivaus/src)
+[Vastaus](osa06-12_aineiston_suodatus/src)
 
-## 
-
-
-[Vastaus](osa03-12_tasaus_oikeaan/src)
-
-## 
+## Henkilöt talteen
 
 
-[Vastaus](osa03-13_sanalaatikko/src)
+[Vastaus](osa06-13_henkilot_talteen/src)
+
+## Kurssin tulokset, osa 4
+
+
+[Vastaus](osa06-14_kurssin_tulokset_osa4/src)
+
+## Sanahaku
+
+
+[Vastaus](osa06-15_sanahaku/src)
+
+## Muistava sanakirja
+
+
+[Vastaus](osa06-16_muistava_sanakirja/src)
 
 ## 
 
