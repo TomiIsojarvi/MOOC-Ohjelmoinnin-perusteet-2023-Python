@@ -198,17 +198,75 @@ carbon
 [Vastaus](osa07-08_satunnaiset_sanat/src)
 
 ## Kuinka vanha
-
+Tee ohjelma, joka kysyy käyttäjän syntymäajan (erikseen päivä, kuukausi ja vuosi) ja tulostaa, kuinka monta päivää vanha käyttäjä oli 31.12.1999 seuraavan esimerkin mukaisesti:
+```
+Päivä: 10
+Kuukausi: 9
+Vuosi: 1979
+Olit 7417 päivää vanha, kun vuosituhat vaihtui.
+```
+```
+Päivä: 28
+Kuukausi: 3
+Vuosi: 2005
+Et ollut syntynyt, kun vuosituhat vaihtui.
+```
+Voit olettaa, että kaikki annetut päivä-kuukausi-vuosi-yhdistelmät ovat mahdollisia (eli käyttäjä ei siis anna esim. syötettä 31.2.1999).
 
 [Vastaus](osa07-09_kuinka_vanha/src)
 
 ## Henkilötunnus oikein?
+Tee funktio onko_validi(hetu: str), joka palauttaa True tai False sen mukaan, onko annettu henkilötunnus oikea. Henkilötunnus on muotoa ppkkvvXyyyz, jossa ppkkvv kertoo syntymäajan (päivä/kuukausi/vuosi), X on syntymävuosisadasta riippuva välimerkki, yyy henkilökohtainen yksilönumero ja z tarkistemerkki.
 
+Ohjelman tulee tarkastaa, että
+
+- alkuosassa on ppkkvv-muodossa oleva päivämäärä, joka on olemassa oleva päivämäärä
+- välimerkki on + (1800-luku), - (1900-luku) tai A (2000-luku) ja
+- lopussa oleva tarkastusmerkki on oikein.
+
+Tarkastusmerkki lasketaan jakamalla syntymäajasta ja yksilönumerosta muodostuva numerosarja 31:llä ja ottamalla tästä jakojäännös. Merkki valitaan sitten jakojäännöksen mukaisesta indeksistä merkkijonosta 0123456789ABCDEFHJKLMNPRSTUVWXY. Esimerkiksi jos jakojäännös on 12, valitaan indeksissä 12 oleva merkki C.
+
+Lisätietoa laskemisesta löydät esimerkiksi Digi- ja väestötietoviraston sivuilta.
+
+HUOM! Pidä huolta, ettet jaa omaa henkilötunnustasi esimerkiksi testikoodin mukana, jos kysyt neuvoja tehtävään kurssin keskustelualueella tai muualla.
+
+Oikeamuotoisia henkilötunnuksia testaamiseen ovat esimerkiksi seuraavat:
+
+- 230827-906F
+- 120488+246L
+- 310823A9877
 
 [Vastaus](osa07-10_henkilotunnus_oikein/src)
 
 ## Ruutuaika
+Ohjelmassa kirjoitetaan käyttäjän määrittelemään tiedostoon "ruutuaikoja", eli käyttäjän television, tietokoneen ja mobiililaitteen ääressä tiettyinä päivinä viettämää aikaa.
 
+Ohjelma toimii seuraavasti:
+```
+Tiedosto: kesakuun_loppu.txt
+Aloituspäivä: 24.6.2020
+Montako päivää: 5
+Anna ruutuajat kunakin päivänä minuutteina (TV tietokone mobiililaite):
+Ruutuaika 24.06.2020: 60 120 0
+Ruutuaika 25.06.2020: 0 0 0
+Ruutuaika 26.06.2020: 180 0 0
+Ruutuaika 27.06.2020: 25 240 15
+Ruutuaika 28.06.2020: 45 90 5
+Tiedot tallennettu tiedostoon kesakuun_loppu.txt
+```
+Kunkin päivän riville on siis annettu välilyönnillä eroteltuna kolme minuuttimäärää.
+
+Ohjelma tallentaa tilaston ruutuajoista tiedostoon kesakuun_loppu.txt, joka näyttää yllä olevalla syötteellä seuraavalta:
+```
+Ajanjakso: 24.06.2020-28.06.2020
+Yht. minuutteja: 780
+Keskim. minuutteja: 156.0
+24.06.2020: 60/120/0
+25.06.2020: 0/0/0
+26.06.2020: 180/0/0
+27.06.2020: 25/240/15
+28.06.2020: 45/90/5
+```
 
 [Vastaus](osa07-11_ruutuaika/src)
 
