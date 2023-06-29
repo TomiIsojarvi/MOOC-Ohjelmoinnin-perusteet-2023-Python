@@ -1,43 +1,88 @@
 # Osa 7 - Tehtävien vastaukset
-## 
+## Hypotenuusa
+Tee funktio hypotenuusa(kateetti1: float, kateetti2: float), joka saa parametrikseen suorakulmaisen kolmion kateettien pituudet. Funktio palauttaa kolmion hypotenuusan pituuden.
+
+Ratkaisu lasketaan Pythagoraan lauseen avulla. Saat laskettua neliöjuuren math-moduulin funktion avulla.
+
+Esimerkkejä:
+```python
+print(hypotenuusa(3,4)) # 5.0
+print(hypotenuusa(5,12)) # 13.0
+print(hypotenuusa(1,1)) # 1.4142135623730951
+```
+
+[Vastaus](osa07-01_hypotenuusa/src)
+
+## Erikoismerkit
+Moduulissa string on merkkijonovakioita, jotka määrittelevät tiettyjä merkkiryhmiä (esim. pienet kirjaimet ja välimerkit). Tutustu näihin vakioihin ja kirjoita niitä käyttäen funktio jaa_merkkeihin(merkkijono: str), joka saa parametrikseen merkkijonon. Funktio palauttaa tuplen, jossa parametrina saadun merkkijonon merkit on jaettu kolmeen eri merkkijonoon:
+
+- Ensimmäisessä jonossa on kaikki pienet ja suuret englanninkieliset kirjaimet (vakio ascii_letters)
+- Toisessa jonossa on kaikki vakiossa punctuation määritellyt välimerkit
+- Kolmannessa jonossa on kaikki merkit (mukaan lukien esim. välilyönnit), jotka eivät kuulu kahteen edelliseen ryhmään
+
+Merkit tulee tallentaa palautettuihin merkkijonoihin siinä järjestyksessä kuin ne esiintyvät alkuperäisessä merkkijonossa.
+
+Esimerkki:
+```python
+osat = jaa_merkkeihin("Tämä on testi!!! Toimiiko, mitä?")
+print(osat[0])
+print(osat[1])
+print(osat[2])
+```
+```
+TmontestiToimiikomit
+!!!,?
+ää    ä
+```
+
+[Vastaus](osa07-02_erikoismerkit/src)
+
+## Murtoluvuilla laskeminen
+Tutustu Pythonin moduuliin fractions ja toteuta sen avulla funktio jaa_palasiksi(maara: int), joka saa parametrikseen palasten määrän. Funktio jakaa luvun 1 parametrin mukaisesti yhtä suuriin murtolukupalasiin ja palauttaa nämä palaset listassa.
+
+Esimerkki:
+```python
+for p in jaa_palasiksi(3):
+    print(p)
+
+print()
+
+print(jaa_palasiksi(5))
+```
+```
+1/3
+1/3
+1/3
+
+[Fraction(1, 5), Fraction(1, 5), Fraction(1, 5), Fraction(1, 5), Fraction(1, 5)]
+```
+
+[Vastaus](osa07-03_murtoluvuilla_laskeminen/src)
+
+## Lottonumerot
 
 
-[Vastaus](osa03-00_tulosta_luvut/src)
+[Vastaus](osa07-04_lottonumerot/src)
 
-## 
-
-
-[Vastaus](osa03-01_lahtolaskenta/src)
-
-## 
+## Salasanan arpoja, osa 1
 
 
-[Vastaus](osa03-02_luvut/src)
+[Vastaus](osa07-05_salasanan_arpoja_1/src)
 
-## 
-
-
-[Vastaus](osa03-03_kahden_potenssit/src)
-
-## 
+## Salasanan arpoja, osa 2
 
 
-[Vastaus](osa03-04_luvun_n_potenssit/src)
+[Vastaus](osa07-06_salasanan_arpoja_2/src)
 
-## 
-
-
-[Vastaus](osa03-04a_perakkaisten_summa_helpompi/src)
-
-## 
+## Noppasimulaatio
 
 
-[Vastaus](osa03-05_perakkaisten_summa/src)
+[Vastaus](osa07-07_noppasimulaatio/src)
 
-## 
+## Satunnaiset sanat
 
 
-[Vastaus](osa03-05a_monistetut_jonot/src)
+[Vastaus](osa07-08_satunnaiset_sanat/src)
 
 ## 
 
