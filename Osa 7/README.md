@@ -270,30 +270,30 @@ Keskim. minuutteja: 156.0
 
 [Vastaus](osa07-11_ruutuaika/src)
 
-## 
+## JSON-tiedoston käsittely
 
 
-[Vastaus](osa03-09_risuaitaviiva/src)
+[Vastaus](osa07-12_jsontiedostot/src)
 
-## 
-
-
-[Vastaus](osa03-10_risuaitanelio/src)
-
-## 
+## Kurssien tilastot
 
 
-[Vastaus](osa03-11_alleviivaus/src)
+[Vastaus](osa07-13_kurssistatistiikka/src)
 
-## 
-
-
-[Vastaus](osa03-12_tasaus_oikeaan/src)
-
-## 
+## Kuka huijasi
 
 
-[Vastaus](osa03-13_sanalaatikko/src)
+[Vastaus](osa07-14_kuka_huijasi/src)
+
+## Kuka huijasi, versio 2
+
+
+[Vastaus](osa07-15_kuka_huijasi_2/src)
+
+## Spellchecker, versio 2
+
+
+[Vastaus](osa07-16_spellchecker_versio2/src)
 
 ## 
 
